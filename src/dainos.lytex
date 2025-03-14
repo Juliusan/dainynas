@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[lithuanian,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\thispagestyle{empty}
+\begin{document}
+
+    \begin{lilypond}
+        \score {
+            \relative c' {
+                \time 4/4
+                \clef treble
+                e8 d8 g4 g4. f8 e4 d8 f8 e4 e2
+            }
+            \addlyrics{
+                Ty -- liai lei -- džias pa -- var -- gu -- si sau -- lė.
+            }
+        }
+    \end{lilypond}
+
+\end{document}
