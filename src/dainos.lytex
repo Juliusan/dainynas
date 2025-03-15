@@ -6,14 +6,34 @@
 \begin{document}
 
     \begin{lilypond}
+        \header {
+            title = "Tyliai leidžias pavargusi saulė"
+        }
         \score {
             \relative c' {
-                \time 4/4
+                \autoBeamOff
+                \time 2/4
                 \clef treble
-                e8 d8 g4 g4. f8 e4 d8 f8 e4 e2
+                \partial 4 e8 d8 | <g e>4 <g e>8. <f d>16 | <e c>4 <d g,>8 <f d>8 | <e c>4 <e c>4~ | <e c>4
+                <e c>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>4 <d g,>8 <f d>8 | <e c>4.( <f d>8 | <g e>4)
+                <g e>8 <g e>8 |
+                \repeat volta 2{
+                    <a f>4 <a f>8. <a f>16 | <g e>8 <g e>8 <a f>8 <g e>8 | <g d>4 <g d>4~ | <g d>4
+                    <d g,>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>8 <e c>8 <d g,>8 <f d>8 | }
+                    \alternative{
+                        %\volta 1 {<e c>4.( <f d>8 | <g e>4) <g e>8 <g e>8 | }
+                        \volta 1 {<<{r8 c'8 c8 b8 bes4}\\{<e, c>2~ <e c>4}>> <g e>8 <g e>8}
+                        \volta 2 {<e c>2~ | <e c>4}
+                    } 
+                \bar "|."
             }
             \addlyrics{
                 Ty -- liai lei -- džias pa -- var -- gu -- si sau -- lė.
+                Pas -- ku -- ti -- niai še -- šė -- liai die -- nos.
+                Gal -- būt vis -- ką pa -- sau -- ly -- je pa -- mir -- šiu,
+                Bet ta -- vęs, my -- li -- mo -- ji, nie -- ka -- dos.
+                Gal -- būt
+                dos
             }
         }
     \end{lilypond}
