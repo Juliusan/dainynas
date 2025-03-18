@@ -9,31 +9,66 @@
         \header {
             title = "Tyliai leidžias pavargusi saulė"
         }
-        \score {
-            \relative c' {
-                \autoBeamOff
+        <<
+            \new Staff <<
                 \time 2/4
                 \clef treble
-                \partial 4 e8 d8 | <g e>4 <g e>8. <f d>16 | <e c>4 <d g,>8 <f d>8 | <e c>4 <e c>4~ | <e c>4
-                <e c>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>4 <d g,>8 <f d>8 | <e c>4.( <f d>8 | <g e>4)
-                <g e>8 <g e>8 |
-                \repeat volta 2{
-                    <a f>4 <a f>8. <a f>16 | <g e>8 <g e>8 <a f>8 <g e>8 | <g d>4 <g d>4~ | <g d>4
-                    <d g,>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>8 <e c>8 <d g,>8 <f d>8 | }
-                    \alternative{
-                        %\volta 1 {<e c>4.( <f d>8 | <g e>4) <g e>8 <g e>8 | }
-                        \volta 1 {<<{r8 c'8 c8 b8 bes4}\\{<e, c>2~ <e c>4}>> <g e>8 <g e>8}
-                        \volta 2 {<e c>2~ | <e c>4}
-                    } 
-                \bar "|."
-            }
-            \addlyrics{
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 4 e8 d8 | <g e>4 <g e>8. <f d>16 | <e c>4 <d g,>8 <f d>8 | <e c>4 <e c>4~ | <e c>4
+                        <e c>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>4 <d g,>8 <f d>8 | <e c>4.( <f d>8 | <g e>4)
+                        <g e>8 <g e>8 |
+                        \repeat volta 2{
+                            <a f>4 <a f>8. <a f>16 | <g e>8 <g e>8 <a f>8 <g e>8 | <g d>4 <g d>4~ | <g d>4
+                            <d g,>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>8 <e c>8 <d g,>8 <f d>8 | }
+                            \alternative{
+                                \volta 1 {\voiceTwo <e c>2~ <e c>4 \oneVoice <g e>8 <g e>8}
+                                \volta 2 {<e c>2~ | <e c>4}
+                            } 
+                        \bar "|."
+                    }
+                }
+                \new Voice = "variation" {
+                    \autoBeamOff
+                    \relative c'' {
+                        s4 | s1 | s1 | s1 | s1 | s1 | s1 | s1 \voiceOne | r8 c8 c8 b8 | bes4 \oneVoice
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
                 Ty -- liai lei -- džias pa -- var -- gu -- si sau -- lė.
                 Pas -- ku -- ti -- niai še -- šė -- liai die -- nos.
                 Gal -- būt vis -- ką pa -- sau -- ly -- je pa -- mir -- šiu,
                 Bet ta -- vęs, my -- li -- mo -- ji, nie -- ka -- dos.
                 Gal -- būt
-                dos
+                dos.
+            }
+            \new Lyrics \lyricsto "variation" {
+                O nie -- ka -- dos.
+            }
+        >>
+        \markup{
+            \fill-line{
+            \hspace #1
+            \column{
+                \null\null\null
+                "Išėjai tu rasotais takeliais,"
+                "Nesiklausei tėvelio, nei mamos."
+                "Ant pirštelių skaičiuodama žvaigždutes"
+                "Tu sakei, kad mylėsi visados."
+                \null
+                "Daug žvaigždučių dar liko neskaičiuota."
+                "Suskaičiuoti jų niekas negalės."
+                "Aš mačiau, glamonėjo tave kitas"
+                "Ir aistringai bučiavo lūputes."
+                \null
+                "Jei nemyli, nenori, nereikia -"
+                "Aš iš meilės numirti galiu."
+                "Ir numiręs aš pas tave ateisiu,"
+                "Šaltas kojas pakišiu po dekiu."
+            }
+            \hspace #1
             }
         }
     \end{lilypond}
