@@ -10,7 +10,7 @@
             title = "Tyliai leidžias pavargusi saulė"
         }
         <<
-            \new Staff <<
+            \new Staff = "staff" <<
                 \time 2/4
                 \clef treble
                 \new Voice = "main" {
@@ -21,56 +21,107 @@
                         <g e>8 <g e>8 |
                         \repeat volta 2{
                             <a f>4 <a f>8. <a f>16 | <g e>8 <g e>8 <a f>8 <g e>8 | <g d>4 <g d>4~ | <g d>4
-                            <d g,>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>8 <e c>8 <d g,>8 <f d>8 | }
-                            \alternative{
-                                \volta 1 {\voiceTwo <e c>2~ <e c>4 \oneVoice <g e>8 <g e>8}
-                                \volta 2 {<e c>2~ | <e c>4}
-                            } 
+                            <d g,>8 <d g,>8 | <g e>4 <g e>8. <f d>16 | <e c>8 <e c>8 <d g,>8 <f d>8 |
+                        }
+                        \alternative{
+                            \volta 1 {\voiceTwo <e c>2~ <e c>4 \oneVoice <g e>8 <g e>8}
+                            \volta 2 {<e c>2~ | <e c>4}
+                        } 
                         \bar "|."
                     }
                 }
                 \new Voice = "variation" {
                     \autoBeamOff
                     \relative c'' {
-                        s4 | s1 | s1 | s1 | s1 | s1 | s1 | s1 \voiceOne | r8 c8 c8 b8 | bes4 \oneVoice
+                        s4 | \repeat unfold 7 {s1} \voiceOne | r8 c8 c8 b8 | bes4 \oneVoice
                     }
                 }
             >>
             \new Lyrics \lyricsto "main" {
                 Ty -- liai lei -- džias pa -- var -- gu -- si sau -- lė.
                 Pas -- ku -- ti -- niai še -- šė -- liai die -- nos.
-                Gal -- būt vis -- ką pa -- sau -- ly -- je pa -- mir -- šiu,
-                Bet ta -- vęs, my -- li -- mo -- ji, nie -- ka -- dos.
-                Gal -- būt
-                dos.
+                \repeat volta 2{
+                    Gal -- būt vis -- ką pa -- sau -- ly -- je pa -- mir -- šiu,
+                    Bet ta -- vęs, my -- li -- mo -- ji, nie -- ka -- 
+                }
+                \alternative{
+                    \volta 1 {dos. Gal -- būt}
+                    \volta 2 {dos.}
+                }
             }
-            \new Lyrics \lyricsto "variation" {
+            \new Lyrics \with { alignAboveContext = "staff" } {\lyricsto "variation" {
                 O nie -- ka -- dos.
-            }
+            }}
         >>
+
         \markup{
             \fill-line{
-            \hspace #1
-            \column{
-                \null\null\null
-                "Išėjai tu rasotais takeliais,"
-                "Nesiklausei tėvelio, nei mamos."
-                "Ant pirštelių skaičiuodama žvaigždutes"
-                "Tu sakei, kad mylėsi visados."
-                \null
-                "Daug žvaigždučių dar liko neskaičiuota."
-                "Suskaičiuoti jų niekas negalės."
-                "Aš mačiau, glamonėjo tave kitas"
-                "Ir aistringai bučiavo lūputes."
-                \null
-                "Jei nemyli, nenori, nereikia -"
-                "Aš iš meilės numirti galiu."
-                "Ir numiręs aš pas tave ateisiu,"
-                "Šaltas kojas pakišiu po dekiu."
-            }
-            \hspace #1
+                \hspace #1
+                \column{
+                    \combine \null \vspace #0.5
+                    "Išėjai tu rasotais takeliais,"
+                    "Nesiklausei tėvelio, nei mamos."
+                    "Ant pirštelių skaičiuodama žvaigždutes"
+                    "Tu sakei, kad mylėsi visados."
+
+                    \combine \null \vspace #0.1
+                    "Daug žvaigždučių dar liko neskaičiuota."
+                    "Suskaičiuoti jų niekas negalės."
+                    "Aš mačiau, glamonėjo tave kitas"
+                    "Ir aistringai bučiavo lūputes."
+
+                    \combine \null \vspace #0.1
+                    "Jei nemyli, nenori, nereikia -"
+                    "Aš iš meilės numirti galiu."
+                    "Ir numiręs aš pas tave ateisiu,"
+                    "Šaltas kojas pakišiu po dekiu."
+                    
+                    \combine \null \vspace #0.1
+                }
+                \hspace #1
             }
         }
+    \end{lilypond}
+    
+    Kažkoks tekstas
+    
+    \begin{lilypond}
+        \header {
+            title = "Saulutė nusileido"
+        }
+        <<
+            \new Staff <<
+                \time 9/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative g' {
+                        g8 g8 g8 g8([ f8]) g8 a4 g8 | f8 f8 f8 f8([ g8]) a8 g4 f8 |
+                        \repeat volta 2{
+                            e8 e8 e8 e8([ f8]) g8 f4 d8 | 
+                        }
+                        \alternative{
+                            \volta 1 {a'8 a8 a8 g4 g8 e4 d8 |}
+                            \volta 2 {a'8 a8 a8 g4 g8 e4~ e8 |}
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Sau -- lu -- tė nu -- si -- lei -- do, mė -- nu -- lis pa -- te -- kė -- jo,	
+                \repeat volta 2{
+                    jau -- na gra -- ži mer -- ge -- lė
+                }
+                \alternative{
+                    \volta 1 {pro lan -- ge -- lį žiū -- rė -- jo,}
+                    \volta 2 {pro lan -- ge -- lį žiū -- \set ignoreMelismata = ##t rė -- (jo). \unset ignoreMelismata}
+                }
+            }
+            %\new Lyrics \lyricsto "variation" {
+            %    O nie -- ka -- dos.
+            %}
+        >>
     \end{lilypond}
 
 \end{document}
