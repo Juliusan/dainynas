@@ -1,9 +1,11 @@
-\documentclass{article}
+\documentclass[twoside]{report}
+\usepackage[a4paper]{geometry}
 \usepackage[lithuanian,english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\thispagestyle{empty}
+
 \begin{document}
+    \include{titulinis}
 
     \begin{lilypond}
         \header {
