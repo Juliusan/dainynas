@@ -3,14 +3,30 @@
 \usepackage[lithuanian,english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]  % Remove "Chapter" and number
+  {\normalfont\Huge\bfseries}{}{0pt}{}
+
+\titleformat{\section}[display]
+  {\normalfont\LARGE\bfseries\center}{}{0pt}{}
+  
+\titlespacing{\chapter} % Adjust chapter spacing
+  {0pt} % Left margin
+  {0pt} % Space above title
+  {10pt} % Space below title  
 
 \begin{document}
     \include{titulinis}
-
+    
+    \chapter{Įvadas}
+    
+    Čia bus įvadas.
+    
+    \chapter{Dainos}
+    
+    \section{Tyliai leidžias pavargusi saulė}
     \begin{lilypond}
-        \header {
-            title = "Tyliai leidžias pavargusi saulė"
-        }
         <<
             \new Staff = "staff" <<
                 \time 2/4
@@ -85,12 +101,8 @@
         }
     \end{lilypond}
     
-    Kažkoks tekstas
-    
+    \section{Saulutė nusileido}
     \begin{lilypond}
-        \header {
-            title = "Saulutė nusileido"
-        }
         <<
             \new Staff <<
                 \time 9/8
