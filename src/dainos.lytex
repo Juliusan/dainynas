@@ -61,35 +61,23 @@
                 O nie -- ka -- dos.
             }}
         >>
-
-        \markup{
-            \fill-line{
-                \hspace #1
-                \column{
-                    \combine \null \vspace #0.5
-                    "Išėjai tu rasotais takeliais,"
-                    "Nesiklausei tėvelio, nei mamos."
-                    "Ant pirštelių skaičiuodama žvaigždutes"
-                    "Tu sakei, kad mylėsi visados."
-
-                    \combine \null \vspace #0.1
-                    "Daug žvaigždučių dar liko neskaičiuota."
-                    "Suskaičiuoti jų niekas negalės."
-                    "Aš mačiau, glamonėjo tave kitas"
-                    "Ir aistringai bučiavo lūputes."
-
-                    \combine \null \vspace #0.1
-                    "Jei nemyli, nenori, nereikia -"
-                    "Aš iš meilės numirti galiu."
-                    "Ir numiręs aš pas tave ateisiu,"
-                    "Šaltas kojas pakišiu po dekiu."
-                    
-                    \combine \null \vspace #0.1
-                }
-                \hspace #1
-            }
-        }
     \end{lilypond}
+    \begin{DainosZodziai}{2}{Nesiklausei tėvelio, nei mamos.}
+        \DainosPosmas{2}Išėjai tu rasotais takeliais,\\*
+        Nesiklausei tėvelio, nei mamos.\\*
+        Ant pirštelių skaičiuodama žvaigždutes\\*
+        Tu sakei, kad mylėsi visados.
+
+        \DainosPosmas{3}Daug žvaigždučių dar liko neskaičiuota.\\*
+        Suskaičiuoti jų niekas negalės.\\*
+        Aš mačiau, glamonėjo tave kitas\\*
+        Ir aistringai bučiavo lūputes.
+
+        \DainosPosmas{4}Jei nemyli, nenori, nereikia ---\\*
+        Aš iš meilės numirti galiu.\\*
+        Ir numiręs aš pas tave ateisiu,\\*
+        Šaltas kojas pakišiu po dekiu.
+    \end{DainosZodziai}
     
     \section{Saulutė nusileido}
     \begin{lilypond}
@@ -100,13 +88,13 @@
                 \new Voice = "main" {
                     \autoBeamOff
                     \relative g' {
-                        g8 g8 g8 g8([ f8]) g8 a4 g8 | f8 f8 f8 f8([ g8]) a8 g4 f8 |
+                        <g e>8 <g e>8 <g e>8 <g e>8([ <f d>8]) <g e>8 <a f>4 <g e>8 | <f d>8 <f d>8 <f d>8 <f d>8([ <g e>8]) <a f>8 <g e>4 <f d>8 |
                         \repeat volta 2{
-                            e8 e8 e8 e8([ f8]) g8 f4 d8 | 
+                            <e c>8 <e c>8 <e c>8 <e c>8([ <f d>8]) <g e>8 <f d>4 <d g,>8 | 
                         }
                         \alternative{
-                            \volta 1 {a'8 a8 a8 g4 g8 e4 d8 |}
-                            \volta 2 {a'8 a8 a8 g4 g8 e4~ e8 |}
+                            \volta 1 {<a' f>8 <a f>8 <a f>8 <g e>4 <g e>8 <e c>4 <d g,>8 |}
+                            \volta 2 {<a' f>8 <a f>8 <a f>8 <g e>4 <g e>8 <e c>4~ <e c>8 |}
                         } 
                         \bar "|."
                     }
@@ -122,10 +110,23 @@
                     \volta 2 {pro lan -- ge -- lį žiū -- \set ignoreMelismata = ##t rė -- (jo). \unset ignoreMelismata}
                 }
             }
-            %\new Lyrics \lyricsto "variation" {
-            %    O nie -- ka -- dos.
-            %}
         >>
     \end{lilypond}
+    \begin{DainosZodziai}{3}{Ko sėdi už stalelio}
+        \DainosPosmas{2}Ko sėdi už stalelio?\\*
+        Ko žiūri pro langelį?\\*
+        Ko neini į darželį\\*
+        Skinti žalių rūtelių?
+        
+        \DainosPosmas{3}Nei man rūteles skinti,\\*
+        Nei vainikėlį pinti,\\*
+        Man dieną naktį rūpi,\\*
+        Kaip su berneliu būti.
+        
+        \DainosPosmas{4}Nušluostyk ašarėles,\\*
+        Palaistyk rūtytėles,\\*
+        Atjos tavo bernelis\\*
+        Iš tolimos šalelės.
+    \end{DainosZodziai}
 
 \end{document}
