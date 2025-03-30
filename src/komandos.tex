@@ -1,0 +1,14 @@
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]  % Remove "Chapter" and number
+  {\normalfont\Huge\bfseries}{}{0pt}{}
+
+\titleformat{\section}[display]
+  {\normalfont\LARGE\bfseries\center}{}{0pt}{}
+  
+\titlespacing{\chapter} % Adjust chapter spacing
+  {0pt} % Left margin
+  {0pt} % Space above title
+  {10pt} % Space below title  
+
+\newcommand{\DainosPavadinimas}[1]{\section{#1}}
