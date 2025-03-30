@@ -1,4 +1,6 @@
 \usepackage{titlesec}
+\usepackage{verse}
+\usepackage{multicol}
 
 \titleformat{\chapter}[display]  % Remove "Chapter" and number
   {\normalfont\Huge\bfseries}{}{0pt}{}
@@ -12,3 +14,17 @@
   {10pt} % Space below title  
 
 \newcommand{\DainosPavadinimas}[1]{\section{#1}}
+
+\newcommand{\DainosPosmas}[1]{\flagverse{#1.}}
+\newenvironment{DainosZodziai}[2]
+{
+    \def\columnCount{#1}
+    \ifnum\columnCount>1\begin{multicols}{\columnCount}\fi
+    \settowidth{\versewidth}{#2}
+    \begin{verse}[\versewidth]
+}{
+    \end{verse}
+    \ifnum\columnCount>1\end{multicols}\fi
+}
+\setlength{\vleftskip}{0.5em}	% Tarpas tarp posmo numerio ir posmo
+

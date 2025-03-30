@@ -1,6 +1,6 @@
 build: dainos.pdf
 
-dainos.pdf: build/dainos.tex build/titulinis.tex
+dainos.pdf: build/dainos.tex build/titulinis.tex build/komandos.tex
 	(cd build && pdflatex -output-directory=. dainos.tex)
 	mv build/dainos.pdf .
 
