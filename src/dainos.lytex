@@ -7,11 +7,16 @@
 \input{komandos.tex}
 
 \begin{document}
+    \pagenumbering{alph}
     \include{titulinis}
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    \include{turinys}
     
     \chapter{Įvadas}
     
     Čia bus įvadas.
+    \cleardoublepage
     
     \chapter{Dainos}
     
@@ -79,7 +84,7 @@
         Šaltas kojas pakišiu po dekiu.
     \end{DainosZodziai}
     
-    \section{Saulutė nusileido}
+    \DainosPavadinimas{Saulutė nusileido}
     \begin{lilypond}
         <<
             \new Staff <<
@@ -112,7 +117,7 @@
             }
         >>
     \end{lilypond}
-    \begin{DainosZodziai}{3}{Ko sėdi už stalelio}
+    \begin{DainosZodziai}{3}{Ko žiūri pro langelį?}
         \DainosPosmas{2}Ko sėdi už stalelio?\\*
         Ko žiūri pro langelį?\\*
         Ko neini į darželį\\*
@@ -128,5 +133,61 @@
         Atjos tavo bernelis\\*
         Iš tolimos šalelės.
     \end{DainosZodziai}
+    
+    \DainosPavadinimas{Obelėlė}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        <fis d>4 <fis d>4 <e a,>8 <g e>8 | <fis d>4 <fis d>4 <e a,>8 <e a,>8 |
+                        <fis d>8 <g e>8 <a fis>8([ <fis d>8]) <b g>8 <b g>8| <a fis>2.|
+                        \repeat volta 2{
+                            <g e>8([ <a fis>8]) <b g>4 <b g>8 <g e>8 | <fis d>4 <a fis>4 <a fis>8 <fis d>8 |
+                            <e a,> <e a,>  <a fis>8([ <b g>8]) <a fis>8 <a fis>8 |
+                        }
+                        \alternative{
+                            \volta 1 {<fis d>2~( <fis d>8 <g e>8) |}
+                            \volta 2 {<fis d>2. |}
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Šių nak -- te -- lį per nak -- te -- lį
+                Ne -- mi -- gau, ne -- mi -- gau.
+                \repeat volta 2{
+                    Su bro -- le -- liu o -- be -- lė -- lę
+                    So -- di -- nau, so -- di --
+                }
+                \alternative{
+                    \volta 1 {nau,}
+                    \volta 2 {nau.}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Raudonų, raudonų}
+        \DainosPosmas{2}Prigyk, prigyk, obelėle,\\*
+        Vėlyvai, vėlyvai.\\*
+        Nokink savo	obuolėlius\\*
+        Raudonai, raudonai.
+        
+        \DainosPosmas{3}Aš priskinsiu obuolėlių\\*
+        Raudonų, raudonų\\*
+        Ir nunešiu jaunimėlin\\*
+        Dovanų, dovanų.
+        
+        \DainosPosmas{4}Mergužėle, lelijėle,\\*
+        Kur buvai, kur buvai,\\*
+        Kad šių naktį jaunimėly\\*
+        Nebuvai, nebuvai?
+    \end{DainosZodziai}
+    
 
 \end{document}
