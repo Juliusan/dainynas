@@ -189,5 +189,60 @@
         Nebuvai, nebuvai?
     \end{DainosZodziai}
     
+    
+    \DainosPavadinimas{Kad aš jojau}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 2/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 d8 fis8 | a4 fis8([ e8]) | 
+                        \repeat volta 2{
+                            <a fis>8 <a fis>8 <b g>8 <a fis>8 |
+                            <g e>8 <fis d>8 <e a,>8 <fis d> 8 | <g e>8([ <a fis>8]) <b g>4~ | <b g>4 <a fis>8 <a e>8 |
+                        }
+                        \alternative{
+                            \volta 1 {<fis d>4 d8 <fis d>8 | <a fis>4 <fis d>8([ <e a,>8]) | }
+                            \volta 2 {<fis d>4 }
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Kad aš jo -- jau
+                per ža -- lią gi -- ru -- žę,
+                aiš -- kiai švie -- tė mė -- nu -- lis.
+                Liū -- ly, liū -- ly,
+            }
+            \new Lyrics \lyricsto "main" {
+                \skip 8 \skip 8 \skip 4 \skip4
+                liū -- ly, liū -- ly, liū -- ly,
+                aiš -- kiai švie -- tė mė -- nu -- 
+                \skip 4 \skip 8 \skip 8 \skip 4 \skip 4
+                lis.
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Grąžin' mane atgalios.}
+        \DainosPosmas{2}Nenujojus nei pusės kelelio\\*
+        Grąžin' mane atgalios.\\*
+        Liūly, liūly, liūly, liūly, liūly,\\*
+        Grąžin' mane atgalios.
+        
+        \DainosPosmas{3}Aš pro stiklo langelį žiūrėjau\\*
+        Tu su kitu kalbėjai.\\*
+        Liūly, liūly, liūly, liūly, liūly,\\*
+        Tu su kitu kalbėjai.
+        
+        \DainosPosmas{4}Tu su kitu berneliu kalbėjai,\\*
+        Man širdelė nerami.\\*
+        Liūly, liūly, liūly, liūly, liūly,\\*
+        Man širdelė nerami.
+    \end{DainosZodziai}
 
 \end{document}
