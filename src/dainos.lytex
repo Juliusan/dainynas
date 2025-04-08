@@ -20,6 +20,7 @@
     
     \chapter{Dainos}
     
+    
     \DainosPavadinimas{Tyliai leidžias pavargusi saulė}
     \begin{lilypond}
         <<
@@ -84,6 +85,7 @@
         Šaltas kojas pakišiu po dekiu.
     \end{DainosZodziai}
     
+    
     \DainosPavadinimas{Saulutė nusileido}
     \begin{lilypond}
         <<
@@ -133,6 +135,7 @@
         Atjos tavo bernelis\\*
         Iš tolimos šalelės.
     \end{DainosZodziai}
+    
     
     \DainosPavadinimas{Obelėlė}
     \begin{lilypond}
@@ -244,5 +247,143 @@
         Liūly, liūly, liūly, liūly, liūly,\\*
         Man širdelė nerami.
     \end{DainosZodziai}
+    
+
+    \DainosPavadinimas{Stovyklautojų daina}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key f \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        \partial 4. c8 a'8 g8 | f4 f8 f4 c8 a'8 g8 | f4 \xNote{bes4^"(ploti)" bes8}
+                        c,8 a'8 g8 | f4 f8 f4 f8 e8 f8 | g4 \xNote{bes4 bes8}
+                        d,8 bes'8 a8 | g4 g8 g4 d8 bes'8 a8 | g4 \xNote{bes4 bes8}
+                        d,8 bes'8 a8 | g4 g8 g4 g8 f8 g8 | a4
+                        f4 g4 a4 |
+                        \repeat volta 2{
+                            bes4 f8 c'4 bes4 f8 | c'4 bes4.
+                            bes8 c8 bes8 | a4 f8 bes4 a4 a8 | bes4 a4.
+                            a8 bes8 a8 | g4 c,8 a'4 g4 c,8 | a'4 g4.
+                            a8 a8 g8 | 
+                        }
+                        \alternative{
+                            \volta 1 {f4( g4 a8) f8 g8 a8 |}
+                            \volta 2 {f4 \override NoteHead.style = #'slash f'8^"(garsiai skanduoti)" f8 f8 f8 f8 f8 | f2~ f8}
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Mes u -- pes per -- plau -- kėm po tris kar -- tus, \skip 4 \skip 8 
+                Mie -- go -- jom mieg -- mai -- šiuos tik -- tai po du, \skip 4 \skip 8
+                Vi -- sur ke -- lia -- vo -- me, vi -- sur drau -- ge \skip 4 \skip 8
+                Uo -- dų su -- kan -- džio -- ta link -- sma gau -- ja.
+                Ir po vel -- 
+                \repeat volta 2{
+                    nių vi -- si te -- gul ei -- na,
+                    Ku -- rie dai -- nas į mie -- gą iš -- mai -- no,
+                    Ku -- rie ne -- mėg -- sta ko -- šės su dū -- mais
+                    Ir su uo --
+                }
+                \alternative{
+                    \volta 1 {dais. Ir po vel}
+                    \volta 2 {dais. Te -- gul ei -- na po vel -- niais.}
+                }
+            }
+        >>
+    \end{lilypond}
+    
+
+    \DainosPavadinimas{Kada numirsiu}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \slurDashed
+                        \partial 8 c8 | c4 e8 g8( f8) e8 g4 d8 d8 d8 d8 |
+                        \slurSolid
+                        g4 g8 f8([ e8]) d8 c4 c8 c4 c8
+                        \repeat volta 2{
+                            f4 a8 c8([ b8]) a8 c4 g8 g8 f8 e8 | 
+                        }
+                        \alternative{
+                            \volta 1 {g4  g8 f8([ e8]) d8 c4 c8 c4 c8 | }
+                            \volta 2 {g'4 g8 f8([ e8]) d8 c4 c8 c4 }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Ka -- da \set ignoreMelismata = ##t nu -- mir -- siu, \unset ignoreMelismata ma -- ne pa -- kas -- kit
+                Po di -- de -- le a -- laus bač -- ka,
+                Kad,
+                \repeat volta 2{
+                    ap -- si -- žio -- jęs aš jos ga -- lą,
+                    A -- 
+                }
+                \alternative{
+                    \volta 1 {lu -- tį mauk -- čiau kaip šu -- va. Kad,}
+                    \volta 2 {lu -- tį mauk -- čiau kaip šu -- va.}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Taip šimtą kartu bus geriau.}
+        \DainosPosmas{2}Jūs man varpais neskambaliokit,\\*
+        Aš šito jūsų neprašau.\\*
+        Geriau bokalais užmojuokit,\\*
+        Taip šimtą kartų bus geriau.
+        
+        \DainosPosmas{3}Ant kapo man nerašinėkit,\\*
+        Kada gimiau, kada miriau.\\*
+        Geriau ant kapo užrašykit,\\*
+        Kad alų maukdamas miriau.
+        
+        \DainosPosmas{4}Jūs mano kapą apsodinkit\\*
+        Aukščiausios rūšies taboku,\\*
+        O vietoj kryžiaus pastatykit\\*
+        Pypkutę riestu cibuku.
+        
+        \DainosPosmas{5}Šalia pakaskit tokį dėdę,\\*
+        Kad alų mauktų kaip ir aš,\\*
+        Ir kad turėtų tokią tetą,\\*
+        Kad biškį dėdei, biškį man.
+    \end{DainosZodziai}
+    
+    Kitas pradžios variantas:
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \slurDashed
+                        \partial 8 c8 | g'4 d8 f8( e8) d8 c4 e8 g8 f8 e8 |
+                        \slurSolid
+                        g4 d8 f8([ e8]) d8 c4 c8 c4
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Ka -- da \set ignoreMelismata = ##t nu -- mir -- siu, \unset ignoreMelismata ma -- ne pa -- kas -- kit
+                Po di -- de -- le a -- laus bač -- ka,
+            }
+        >>
+    \end{lilypond}
 
 \end{document}
