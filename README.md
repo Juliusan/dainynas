@@ -9,9 +9,11 @@ Lietuviškos dainos, kurias aš dainavau vis dar dainuoju arba paprasčiausiai n
 The song book is prepared using Latex for text formatting and LilyPond for entering notes.
 To compile it, the `lilypond-book` and `pdflatex` commands are needed in system's path variable.
 For Debian GNU/Linux it should be enough to install `texlive` and `lilypond` packages.
-    $ sudo apt install texlive lilypond
+
+	$ sudo apt install texlive lilypond
     
 If your system can run Makefile, then to generate `dainos.pdf` file in the root folder simply run
-    $ make build
+
+	$ make build
     
 Otherwise, please, consult `Makefile` for a list of commands to run.
