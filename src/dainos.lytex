@@ -452,4 +452,62 @@
         Vien aukšti smėlėti krantai.
     \end{DainosZodziai}
 
+    
+    \DainosPavadinimas{Burkuoja balandžiai po langu}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 8 e8 | <g e>8 <g e>8 <g e>8 <g e>8 <f d>8 <g e>8 <a f>4. <a f>4
+                        <a f>8 | <c a>8 <c a>8 <c a>8 <b g>8 <a f>8 <a f>8 <g e>4.~ <g e>4
+                        <g e>8 |
+                        \repeat volta 2{
+                            <e c>8 <e c>8 <e c>8 <e c>8 <f d>8 <g e>8 <f d>4. <f d>4 
+                            <f d>8 | 
+                        }
+                        \alternative{
+                            \volta 1 {<a f>8 <a f>8 <a f>8 <g e>8 <g e>8 <f d>8 <e c>4.~ <e c>4 <g e>8 |}
+                            \volta 2 {<a f>8 <a f>8 <a f>8 <g e>8 <g e>8 <f d>8 <e c>4.~ <e c>4 }
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Bur -- kuo -- ja ba -- lan -- džiai po lan -- gu,
+                Nus -- vi -- ro jur -- gi -- nų žie -- dai,
+                Iš
+                \repeat volta 2{
+                    to -- lo, iš to -- lo at -- žven -- gia
+                    Pas
+                }
+                \alternative{
+                    \volta 1 {ta -- ve šir -- mie -- ji žir -- gai. Iš}
+                    \volta 2 {ta -- ve šir -- mie -- ji žir -- gai.}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Pravirkdys jaunutę tave,}
+        \DainosPosmas{2}Išmindžios jie rūtų darželį,\\*
+        Pravirkdys jaunutę tave,\\*
+        Išveš tavo turtą ir dalią\\*
+        Ir tave jaunutę išveš.
+        
+        \DainosPosmas{3}Paliks tie takai ūkanoti\\*
+        Ir dienos pragertos piršlių.\\*
+        Kam leidai, kam leidai, močiute,\\*
+        Išvežt mane vargo keliu?
+        
+        \DainosPosmas{4}Turiu aš nedorėlį vyrą\\*
+        Ir porą mažučių vaikų,\\*
+        Todėl pas mamytę, pas brangią\\*
+        Sugrįžti daugiau negaliu.
+    \end{DainosZodziai}
+
 \end{document}

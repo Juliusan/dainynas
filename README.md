@@ -12,7 +12,7 @@ For Debian GNU/Linux it should be enough to install `texlive` and `lilypond` pac
 
 	$ sudo apt install texlive lilypond
     
-If your system can run Makefile, then to generate `dainos.pdf` file in the root folder simply run
+If your system contains `make` utility, then to generate `dainos.pdf` file in project's root folder simply run
 
 	$ make build
     
