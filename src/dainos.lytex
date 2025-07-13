@@ -510,4 +510,59 @@
         Sugrįžti daugiau negaliu.
     \end{DainosZodziai}
 
+    
+    \DainosPavadinimas{Kai aš turėjau šyvą kumelę}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 6/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \repeat volta 2{
+                            <a' fis>8 <fis d>8 <fis d>8 <fis d>4 <fis d>8 | <a fis>8 <e a,>8 <e a,>8 <e a,>4 <fis d>8
+                            <g e>8 <g e>8 <a fis>8 <b g>4 <b g>8 | 
+                        }
+                        \alternative{
+                            \volta 1 {<a fis>8 <a fis>8 <g e>8 <fis d>4  <g e>8 |}
+                            \volta 2 {<a fis>8 <a fis>8 <g e>8 <fis d>4~ <fis d>8 | }
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Kai aš tu -- rė -- jau šy -- vą ku -- me -- lę,
+                Kas -- die -- ną jo -- jau pas tą pa -- ne -- lę.
+            }
+            \new Lyrics \lyricsto "main" {
+                Oi ly -- lia ly -- lia, oi ly -- lia -- lia -- lia,
+                Kas -- die -- ną jo -- jau \skip 8 \skip 8 \skip 8 \skip 4 \skip 8 pas tą pa -- \set ignoreMelismata = ##t ne -- (lę). \unset ignoreMelismata
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Mano panelė batvinius raško.}
+        \DainosPosmas{2}Kumelė bėga tik balos taškos',\\*
+        Mano panelė batvinius raško.\\*
+        Oi lylia lylia, oi lylialialia,\\*
+        Mano panelė batvinius raško.
+        
+        \DainosPosmas{3}Sijonas trumpas, vos iki kelių,\\*
+        Veidas raukšlėtas, pilnas dulkelių.\\*
+        Oi lylia lylia, oi lylialialia,\\*
+        Veidas raukšlėtas, pilnas dulkelių.
+        
+        \DainosPosmas{4}Mano kumelė vos tik pamatė\\*
+        Ausis pastatė, kojas pakratė.\\*
+        Oi lylia lylia, oi lylialialia,\\*
+        Ausis pastatė, kojas pakratė.
+        
+        \DainosPosmas{5}Kai vėl turėsiu šyvą kumelę,\\*
+        Daugiau neb'josiu pas tą panelę.\\*
+        Oi lylia lylia, oi lylialialia,\\*
+        Daugiau neb'josiu pas tą panelę.
+    \end{DainosZodziai}
+
 \end{document}
