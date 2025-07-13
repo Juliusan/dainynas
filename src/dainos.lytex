@@ -55,6 +55,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Ty -- liai lei -- džias pa -- var -- gu -- si sau -- lė.
                 Pas -- ku -- ti -- niai še -- šė -- liai die -- nos.
                 \repeat volta 2{
@@ -111,6 +112,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Sau -- lu -- tė nu -- si -- lei -- do, mė -- nu -- lis pa -- te -- kė -- jo,	
                 \repeat volta 2{
                     jau -- na gra -- ži mer -- ge -- lė
@@ -165,6 +167,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Šių nak -- te -- lį per nak -- te -- lį
                 Ne -- mi -- gau, ne -- mi -- gau.
                 \repeat volta 2{
@@ -220,6 +223,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Kad aš jo -- jau
                 per ža -- lią gi -- ru -- žę,
                 aiš -- kiai švie -- tė mė -- nu -- lis.
@@ -328,6 +332,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Ka -- da \set ignoreMelismata = ##t nu -- mir -- siu, \unset ignoreMelismata ma -- ne pa -- kas -- kit
                 Po di -- de -- le a -- laus bač -- ka,
                 Kad,
@@ -416,6 +421,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Kur ly -- gūs lau -- kai šia -- pus Nė -- rio,
                 Kur pa -- tran -- kos dau -- žo kran -- tus,
                 Žy --
@@ -479,6 +485,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Bur -- kuo -- ja ba -- lan -- džiai po lan -- gu,
                 Nus -- vi -- ro jur -- gi -- nų žie -- dai,
                 Iš
@@ -534,6 +541,11 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = \markup {
+                    \column { \vspace #.33 "1. "}
+                    \override #'(font-encoding . fetaBraces)
+                    \lookup "brace80"
+                }
                 Kai aš tu -- rė -- jau šy -- vą ku -- me -- lę,
                 Kas -- die -- ną jo -- jau pas tą pa -- ne -- lę.
             }
@@ -662,6 +674,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Sau -- lėj nu -- de -- gu -- si, ba -- sa,
                 Tu pie -- me -- nai -- tė mur -- zi -- na,
                 Tau a -- ky --
@@ -712,6 +725,7 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
                 Ant mel -- svų e -- že -- ro ban -- gų
                 Lai -- ve -- lis su -- pos be ir -- klų,
                 O tu sė --
