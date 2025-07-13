@@ -565,4 +565,186 @@
         Daugiau neb'josiu pas tą panelę.
     \end{DainosZodziai}
 
+    \DainosPavadinimas{Bars, bars}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        d4 fis4  fis8 fis8 e8 d8 | <a' fis>4 <a fis>4 <a fis>8 <a fis>8 <b g>8 <a fis>8 |
+                        <a e>4 <a e>4 <a e>8 <b g>8 <a fis>8 <a e>8 | <fis d>4 <fis d>4 <fis d>8 <fis d>8 <a fis>8 <fis d>8 |
+                        \repeat volta 2{
+                            <e a,>4 <e a,>4. <e a,>8 <d b>8 <e cis>8 | <fis d>4 <a fis>4. <a fis>8 <b g>8 <a fis>8 |
+                            <a e>4 <a e>4. <b g>8 <a fis>8 <a e>8 | 
+                        }
+                        \alternative{
+                            \volta 1 {<fis d>4 <e a,>4 <fis d>8 <fis d>8 <a fis>8 <fis d>8 |}
+                            \volta 2 {<fis d>4 <e a,>4 <fis d>2 |}
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ė -- jau per kie -- me -- lį, žiū -- riu  pro lan -- ge -- lį:
+                Ma -- no mer -- gu -- žė -- lė ra -- šo man laiš -- ke -- lį.
+                \repeat volta 2{
+                    Bars, bars tė -- ve -- lis, bars, bars, mo -- čiu -- tė,
+                    Bars, bars ir nie -- kas
+                }
+                \alternative{
+                    \volta 1 {ne -- už -- tars. Ir vė -- lei}
+                    \volta 2 {ne -- už -- tars.}
+                }
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                Man laiš -- ke -- lį ra -- šo, per laiš -- ke -- lį pra -- šo,
+                At -- jok, ber -- nu -- žė -- li, vė -- lų va -- ka -- rė -- lį. 
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "3. "
+                At -- jok, ber -- nu -- žė -- li, vė -- lų va -- ka -- rė -- lį,
+                O aš tau pak -- lo -- siu mink -- štą pa -- ta -- lė -- lį. 
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "4. "
+                O aš tau pak -- lo -- siu mink -- štą pa -- ta -- lė -- lį,
+                Po gal -- va pa -- dė -- siu kie -- tą ak -- me -- nė -- lį.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "5. "
+                Ė -- jau per kie -- me -- lį, lan -- gas at' -- da -- ry -- tas,
+                Pas ma -- no mer -- ge -- lę sė -- di švan -- sas ki -- tas.                
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "6. "
+                Sun -- ku ak -- me -- nė -- liui, kai per jį va -- žiuo -- ja,
+                Dar sun -- kiau mer -- ge -- lei, kai ant jos dai -- nuo  -- ja.
+            }
+        >>
+    \end{lilypond}
+    
+    Kitas priedainio variantas:
+    
+    \begin{DainosZodziai}{1}{Bars, bars, tėvelis bars, bars,}
+        Bars, bars, tėvelis bars, bars,\\*
+        Tėvelis bars, bars,\\*
+        Močiutė neužtars.
+    \end{DainosZodziai}
+
+    \DainosPavadinimas{Piemenaitė}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 4. c8 e8 g8 | c4 g8 e4 c'8 b4. d,8 e8 f8 | 
+                        b4 a8 a4 g8 g4. e8 e8 e8 |
+                        \repeat volta 2{
+                            a4 g8 g4 e8 f4. d8 d8 g8 |
+                        }
+                        \alternative{
+                            \volta 1 {g4 f8 f4 g8 e4. g8 g8 g8 |}
+                            \volta 2 {g4 f8 f4 g8 e4.}
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Sau -- lėj nu -- de -- gu -- si, ba -- sa,
+                Tu pie -- me -- nai -- tė mur -- zi -- na,
+                Tau a -- ky --
+                \repeat volta 2{
+                    se dan -- gaus švie -- sa,
+                    Tu man vie -- 
+                }
+                \alternative{
+                    \volta 1 {na, vie -- na, vie -- na. Tau a -- ky}
+                    \volta 2 {na, vie -- na, vie -- na.}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Kur tie nameliai, kur takai?}
+        \DainosPosmas{2}Žiedų nei auskarų brangių,\\*
+        Nei šilko rūbų neturi.\\*
+        Plaukuos tau gėlės iš rugių,\\*
+        O veide šypsena skaidri.
+        
+        \DainosPosmas{3}Kur tie nameliai, kur takai?\\*
+        Sakyki, kur tu gyveni?\\*
+        Bet tu šypsais ir nesakai,\\*
+        Tik ateini ir nueini.
+    \end{DainosZodziai}
+
+    \DainosPavadinimas{Ant melsvų ežero bangų}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 4. c8 e8 g8 | c4 b8 b4 a8 a4. a8 b8 c8 |
+                        b4 a8 a4 g8 g4. e8 e8 e8 |
+                        \repeat volta 2{
+                            a4 g8 g4 e8 f4. d8 d8 g8 |
+                        }
+                        \alternative{
+                            \volta 1 {g4 f8 f4 g8 e4. g8 g8 g8 |}
+                            \volta 2 {g4 f8 f4 g8 e4.}
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Ant mel -- svų e -- že -- ro ban -- gų
+                Lai -- ve -- lis su -- pos be ir -- klų,
+                O tu sė --
+                \repeat volta 2{
+                    dė -- jai prie ma -- nęs
+                    Ir sky -- nei
+                }
+                \alternative{
+                    \volta 1 {van -- dens le -- li -- jas. O tu sė}
+                    \volta 2 {van -- dens le -- li -- jas.}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{O jame aš viena (vienas aš) sėdžiu.}
+        \DainosPosmas{2}Puošei lelijom krūtinę,\\*
+        Sakei, kad būsiu mylima(s).\\*
+        Dabar jau viską pamiršai,\\*
+        Sau kitą mylimą radi.
+        
+        \DainosPosmas{3}Man kanklės skamba rankose,\\*
+        Jų aidas dūžta bangose.\\*
+        Jame girdėti ta dalia,\\*
+        Kurią mano širdis kenčia.
+        
+        \DainosPosmas{4}Skambėkit, kanklės, ant bangų,\\*
+        Skambėkit ilgesiu giliu.\\*
+        Mano širdy dabar žaizda\\*
+        Ir neužgis ji niekada.
+        
+        \DainosPosmas{5}Prabėgs dar metai keleri\\*
+        Ir vėlei bus naktis graži.\\*
+        Laivelis supsis be irklų\\*
+        O jame aš viena (vienas aš) sėdžiu.
+    \end{DainosZodziai}
 \end{document}
