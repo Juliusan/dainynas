@@ -17,7 +17,7 @@
     
     Kai aš buvau mažas, dar praeitame tūkstantmetyje, kokiais 1987 metais, mano tėvai gavo naują mašiną --- Žigulį. Kas yra Žigulys ir kodėl gavo, paliksime išsiaiškinti patiems. O šiam kartui užteks žinoti, kad tas Žigulys visai neturėjo radijo. Arba turėjo tokį prastą, kad iš jo vis tiek buvo mažai naudos. Gerai detalių jau nebepamenu. Taigi važiuodami juo visa šeima būdavome priversti dainuoti patys. Važinėdavome ne tiek ir mažai, tai ir dainuodavome tiek, kad kai kurios dainos įstrigo atmintyje dar iki dabar. Jeigu gerai pamenu, mamytė turėjo bent porą nedidelių užrašų knygelių su dainų žodžiais. Vis dar neprarandu vilties jas atrasti. O iki tol noriu surašyti tiek, kiek moku pats. Šituo dainynu nepretenduoju į objektyviai autentiškiausius variantus. Tai nėra mokslinis tautosakos rinkimo projektas. Tai yra melodijos, kokias aš prisimenu, ir žodžiai, kuriuos mano manymu mes ir dainuodavome. Ne viskas iš mano šeimos istorijos. Kai kas iš Lietuvos radijo ir televizijos vaikų choro ar ,,Gabijos`` laikų. Na o kur atmintis būdavo per daug skylėta, ten kiek pagelbėjo ir platusis internetas.
     
-    Stengiausi į dainyną dėti daugiausiai lietuvių liaudies dainas. Kita vertus, liaudies dainos yra gyvos, kol yra dainuojamas. Net ir antrą kartą peržiūrėdamas, ką pats buvau užrašęs prieš kurį laiką, suprasdavau, kad šį kartą tą pačią dainą užrašyčiau truputį kitaip. Tai ką jau kalbėti, apie skirtingų žmonių variantus. Į kai kurias dainas įterpiau ir antrą balsą. Paprastai tai yra daugiau ar mažiau tercija į apačią --- taip vadinamas ,,turavojimas``. Žinoma, tai taip pat nėra vienintelis galimas variantas. Kiekvienas jį gali prisitaikyti pagal save. O bent jau man yra labai gražu, kai antrą balsą dainuoja tenoras, pakėlęs jį oktava aukščiau. Kur leidžia diapazono plotis ir dainuoti pasirinkta tonacija, žinoma.
+    Stengiausi į dainyną dėti daugiausiai lietuvių liaudies dainas. Kita vertus, liaudies dainos yra gyvos, kol yra dainuojamas. Net ir antrą kartą peržiūrėdamas, ką pats buvau užrašęs prieš kurį laiką, suprasdavau, kad šį kartą tą pačią dainą užrašyčiau truputį kitaip. Tai ką jau kalbėti, apie skirtingų žmonių variantus. Į kai kurias dainas įterpiau ir antrą balsą. Paprastai tai yra daugiau ar mažiau tercija į apačią --- taip vadinamas ,,turavojimas``. Žinoma, tai taip pat nėra vienintelis galimas variantas. Kiekvienas jį gali prisitaikyti pagal save. O bent jau man yra labai gražu, kai antrą balsą dainuoja tenoras, pakėlęs jį oktava aukščiau. Kur leidžia diapazono plotis ir dainuoti pasirinkta tonacija, žinoma. Tiesa, tonacijos\dots\ Jos taip pat neprivalo griežtai būti tokios, kokios parašyta. Svarbiausia, kad dainininkams būtų patogu. Juks mes taip pat neturėjome kamertono savo Žigulyje, o iki išmanių mobiliųjų telefonų taip pat dar turėjo prabėgti kiek laiko.
     
     Daugumoje liaudies dainų yra tradicija pabaigus dainą pakartoti pirmą posmą. Man patinka, kai ta repriza atliekama itin tyliai. Na bent jau posmo pradžia, kiek leidžia kantrybė. Apskritai dainos yra skirtos išsilieti pačiam ir išklausyti, prisiderinti prie dainuojančio šalia. Taigi, tegul kiekvienas randa sau priimtiną dainavimo būdą.
     
@@ -817,4 +817,76 @@
         \DainosPosmas{7}Žalias vynas iš vandens,\\*
         O studentas iš piemens.
     \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Snaudžia malūnas prie kelio}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key f \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        \voiceOne
+                        f8 f8 f8 f8 g8 f8 e8 g4~ g4. |
+                        c8 c8 c8 g8 a8 g8 f2. |
+                        \slurDashed
+                        a8 a8 a8 a8 g8 f8 d4( f8) bes4. |
+                        \slurSolid
+                        c,8 c8 c8 a'8 a8 g8 f2. |
+                        \repeat volta 2{
+                            f4. g4 f8 e4 d8 c4. |
+                            g'4. a4 g8 f2. |
+                            a8 a8 a8 a8 g8 f8 g4 f8 bes4. |  
+                            c,4 c8 a'4 g8 f2. |
+                        }
+                        \bar "|."
+                    }
+                }
+                \new Voice = "second" {
+                    \autoBeamOff
+                    \relative f' {
+                        \voiceTwo
+                        s1. s1. s1. s1.
+                        \repeat volta 2{
+                            f4. g4 f8 e4 d8 c4. |
+                            c4. d4 e8 f2. |
+                            f8 f8 f8 es8 es8 es8 d4 d8 des4. |  
+                            c4 c8 c8 d8 e8 f2. |
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Snau -- džia ma -- lū -- nas prie ke -- lio,
+                Sau -- lė se -- niai va -- ka -- ruos,
+                Ži -- ba mė -- nu -- lis \set ignoreMelismata = ##t u -- pe -- ly -- je,\unset ignoreMelismata
+                Klau -- so -- si ma -- no dai -- nos.
+                \repeat volta 2{
+                    Nors nėr ta -- vęs čio -- nai,
+                    Nors tu to -- li,
+                    No -- riu pa -- pa -- sa -- kot tau vie -- nai,
+                    Kas ma -- noj šir -- dy.
+                }
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                Kaip man ta -- ve su -- si -- ras -- ti,
+                Kaip man ta -- ve su -- si -- tikt?
+                Ei -- sim sau -- lė -- ly -- džio lauk -- ti,
+                Ei -- sim auš -- ros pa -- si -- tikt.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "3. "
+                No -- riu šio va -- ka -- ro sap -- ną
+                A -- pie ta -- ve su -- sap -- nuot.
+                No -- riu šią dai -- ną bent kar -- tą
+                Dvie -- se prie u -- pės dai -- nuot.
+            }
+        >>
+    \end{lilypond}
 \end{document}
