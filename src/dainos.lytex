@@ -889,4 +889,61 @@
             }
         >>
     \end{lilypond}
+
+
+    \DainosPavadinimas{Atskrend' sakalėlis}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key f \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        f8. f16 f8 <a f>8 <c a>4. <a f>8 |
+                        <d bes>8. <d bes>16 <d bes>8 <c a>8 <bes g>4 <bes g>4 |
+                        \repeat volta 2{
+                        <bes g>8 <bes g>8 <bes g>8 r8 <bes g>8 <bes g>8 <bes g>8 r8 |
+                        }
+                        \alternative{
+                            \volta 1 {<c a>8. <d bes>16 <c a>8 <c a>8 <a f>4( <g c,>8) <a f>8}
+                            \volta 2 {<c a>8. <d bes>16 <c a>8 <c a>8 <a f>4~ <a f>4}
+                        }
+                        \bar "||"
+                        c4. b8 bes4. a8 | 
+                        g8. f16 e8 d8 c4 \xNote{c'4}
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                At -- skrend' sa -- ka -- lė -- lis per ža -- lią gi -- re -- lę,
+                \repeat volta 2{
+                    At -- mu -- šė spar -- ne -- lius
+                }
+                \alternative{
+                    \volta 1 {į sau -- są eg -- le -- lę,}
+                    \volta 2 {į sau -- są \set ignoreMelismata = ##t eg -- le -- (lę).\unset ignoreMelismata}
+                }
+                Tram -- pa -- ram -- pam  tram -- pa -- ram -- pam -- pam, och!
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{1}{Duok studente tris rublius}
+        \DainosPosmas{2}Sausoji eglelė žaliuoti pradėjo.\\*
+        Kur gi tas bernelis, kur's mane mylėjo?
+        
+        \DainosPosmas{3}Gal už jūrų marių, gal už vandenėlių,\\*
+        Gal kitas mergeles mylėti pradėjo?
+        
+        \DainosPosmas{4}Nei už jūrų marių, nei už vandenėlių,\\*
+        Nei kitas mergeles mylėti pradėjo.
+        
+        \DainosPosmas{5}Jei paukštelis būčiau, sparnelius turėčiau,\\*
+        Skrisčiau pas mergelę rytas vakarėlis.
+    \end{DainosZodziai}
+    
+    Įdomi šitos dainos versija gaunasi visus (arba dalį --- pagal skonį) žodžius ,,bernelis``, ,,mergelė`` pakeitus į ,,trampampam``. Pavyzdžiui, ,,Kur gi tas trampampam, kurs mane mylėjo``.
 \end{document}
