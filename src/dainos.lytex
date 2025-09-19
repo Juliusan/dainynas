@@ -12,7 +12,7 @@
     \setcounter{page}{1}
     \pagenumbering{arabic}
     \include{turinys}
-    
+
     \chapter{Įvadas}
     
     Kai aš buvau mažas, dar praeitame tūkstantmetyje, kokiais 1987 metais, mano tėvai gavo naują mašiną --- Žigulį. Kas yra Žigulys ir kodėl gavo, paliksime išsiaiškinti patiems. O šiam kartui užteks žinoti, kad tas Žigulys visai neturėjo radijo. Arba turėjo tokį prastą, kad iš jo vis tiek buvo mažai naudos. Gerai detalių jau nebepamenu. Taigi važiuodami juo visa šeima būdavome priversti dainuoti patys. Važinėdavome ne tiek ir mažai, tai ir dainuodavome tiek, kad kai kurios dainos įstrigo atmintyje dar iki dabar. Jeigu gerai pamenu, mamytė turėjo bent porą nedidelių užrašų knygelių su dainų žodžiais. Vis dar neprarandu vilties jas atrasti. O iki tol noriu surašyti tiek, kiek moku pats. Šituo dainynu nepretenduoju į objektyviai autentiškiausius variantus. Tai nėra mokslinis tautosakos rinkimo projektas. Tai yra melodijos, kokias aš prisimenu, ir žodžiai, kuriuos mano manymu mes ir dainuodavome. Ne viskas iš mano šeimos istorijos. Kai kas iš Lietuvos radijo ir televizijos vaikų choro ar ,,Gabijos`` laikų. Na o kur atmintis būdavo per daug skylėta, ten kiek pagelbėjo ir platusis internetas.
@@ -946,4 +946,8 @@
     \end{DainosZodziai}
     
     Įdomi šitos dainos versija gaunasi visus (arba dalį --- pagal skonį) žodžius ,,bernelis``, ,,mergelė`` pakeitus į ,,trampampam``. Pavyzdžiui, ,,Kur gi tas trampampam, kurs mane mylėjo``.
+
+    \cleardoublepage
+    % Neišeina padaryti, kad jis būtų pradžioje
+    \printindex
 \end{document}

@@ -1,6 +1,7 @@
 \usepackage{titlesec}
 \usepackage{verse}
 \usepackage{multicol}
+\usepackage{imakeidx}
 \usepackage[unicode]{hyperref} %PDF nuorodoms TURI BŪTI PASKUTINIS!!!
 
 \titleformat{\chapter}[display]  % Remove "Chapter" and number
@@ -14,7 +15,7 @@
   {0pt} % Space above title
   {10pt} % Space below title  
 
-\newcommand{\DainosPavadinimas}[1]{\section{#1}}
+\newcommand{\DainosPavadinimas}[1]{\section{#1}\index{#1}}
 
 \newcommand{\DainosPosmas}[1]{\flagverse{#1.}}
 \newenvironment{DainosZodziai}[2]
@@ -28,4 +29,6 @@
     \ifnum\columnCount>1\end{multicols}\fi
 }
 \setlength{\vleftskip}{0.5em}	% Tarpas tarp posmo numerio ir posmo
+
+\makeindex[title=Abėcėlinė dainų rodyklė,columns=2,program=xindy,options=-L lithuanian -C utf8 -M dainos-xindy-style.xdy]
 
