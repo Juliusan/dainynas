@@ -931,7 +931,7 @@
             }
         >>
     \end{lilypond}
-    \begin{DainosZodziai}{1}{Duok studente tris rublius}
+    \begin{DainosZodziai}{1}{Gal kitas mergeles mylėti pradėjo?}
         \DainosPosmas{2}Sausoji eglelė žaliuoti pradėjo.\\*
         Kur gi tas bernelis, kur's mane mylėjo?
         
@@ -947,6 +947,77 @@
     
     Įdomi šitos dainos versija gaunasi visus (arba dalį --- pagal skonį) žodžius ,,bernelis``, ,,mergelė`` pakeitus į ,,trampampam``. Pavyzdžiui, ,,Kur gi tas trampampam, kurs mane mylėjo``.
 
+
+    \DainosPavadinimas{Sėdžiu po langeliu}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key e \minor
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative e' {
+                        g8 fis8 g8 fis8 e4 b4 | 
+                        <g' e>8 <fis dis>8 <g e>8 <a fis>8 <b g>4 e,4 |
+                        \repeat volta 2{
+                        <b' g>8 <b g>8 <c a>8 <b g>8 <a fis>4( <b g>8) <a fis>8 |
+                        }
+                        \alternative{
+                            \volta 1 {<g e>8 b,8 <g' e>8 <fis dis>8 e8( <fis dis>8 <g e>8) <a fis>8 |}
+                            \volta 2 {<g e>8 b,8 <g' e>8 <fis dis>8 e4~ e4 |}
+                        }
+                        \bar "||"
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Sė -- džiu po lan -- ge -- liu,
+                Žiū -- riu pro lan -- ge -- lį,
+                \repeat volta 2{
+                    Čiū -- čiuo -- ja liū -- liuo -- ja
+                }
+                \alternative{
+                    \volta 1 {Ant ma -- rių lai -- ve -- lis,}
+                    \volta 2 {Ant ma -- rių \set ignoreMelismata = ##t lai -- ve -- (lis).\unset ignoreMelismata}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Marelių putelėm}
+        \DainosPosmas{2}O tame laively\\*
+        Mergužėlė sėdi.\\*
+        Marelių putelėm\\*
+        Sau burnelę prausia.
+        
+        \DainosPosmas{3}Marelių putelėm\\*
+        Sau burnelę prausia.\\*
+        Žuvelių šukelėm\\*
+        Galvelę šukuoja.
+    \end{DainosZodziai}
+    
+    Užrašiau šitą dainą, kaip ją dainuodavome mes. Bent jau aš kaip tai atsimenu. Bet ją užrašyti labai prašė mano žmona, Jūratė. Ir jai nepatiko, kad užrašiau ne taip, kaip dainuodavo jos mama. O iš tiesų skiriasi tik pirmoji nata pirmoje ir analogiškai antroje voltoje:
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key e \minor
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative e' {
+                        e8 b8 <g' e>8 <fis dis>
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Ant ma -- rių lai
+            }
+        >>
+    \end{lilypond}
+    
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex

@@ -18,7 +18,7 @@
 \newcommand{\DainosPavadinimas}[1]{\section{#1}\index{#1}}
 
 \newcommand{\DainosPosmas}[1]{\flagverse{#1.}}
-\newenvironment{DainosZodziai}[2]
+\newenvironment{DainosZodziai}[2]% Pirmasis parametras - keliais stulpeliais išdėlioti posmelius, antrasis - vidutinė posmo eilutė
 {
     \def\columnCount{#1}
     \ifnum\columnCount>1\begin{multicols}{\columnCount}\fi
