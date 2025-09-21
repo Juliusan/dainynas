@@ -964,7 +964,7 @@
                         <b' g>8 <b g>8 <c a>8 <b g>8 <a fis>4( <b g>8) <a fis>8 |
                         }
                         \alternative{
-                            \volta 1 {<g e>8 b,8 <g' e>8 <fis dis>8 e8( <fis dis>8 <g e>8) <a fis>8 |}
+                            \volta 1 {<g e>8 b,8 <g' e>8 <fis dis>8 e8([ <fis dis>8 <g e>8]) <a fis>8 |}
                             \volta 2 {<g e>8 b,8 <g' e>8 <fis dis>8 e4~ e4 |}
                         }
                         \bar "||"
@@ -1018,6 +1018,53 @@
         >>
     \end{lilypond}
     
+
+
+    \DainosPavadinimas{Mane močiutė barė}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \voiceOne
+                        \partial 8 d8 | <fis d>4 <e cis>8 <g e>4 <fis d>8 <e cis>4. <e cis>4 <fis d>8 |
+                        <g e>8([ <fis d>8]) <g e>8 <a fis>4 <g e>8 <fis d>4. <fis d>4 <a fis>8 |
+                        <a fis>4 <a d,>8 <b g>4 <a fis>8 <g e>4. <g e>4 <e cis>8 |
+                        <g e>8([ <fis d>8]) <g e>8 <a fis>4 <g e>8 <fis d>4. <fis d>4 <a fis>16 <a fis>16 |
+                        <a fis>8 r8 <g e>8 <fis d>8 r8 <a fis>16 <a fis>16 <a fis>8 r8 <g e>8 <fis d>8 r8 <a fis>8 |
+                        <a fis>4 <a d,>8 <b g>4 <a fis>8 <g e>4. <g e>4 <e cis>16 <fis d>16 |
+                        <g e>4 <fis d>8 <e cis>4 <e cis>16 <fis d>16 <g e>4 <fis d>8 <e cis>4 <g e>8 |
+                        <cis a>4 <b g>8 <a fis>4 <g e>8 <fis d>4. <fis d>4
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ma -- ne mo -- čiu -- tė ba -- rė,
+                Li -- ne -- lių raut iš -- va -- rė.
+                Oi ly, oi ly, oi ly -- lia,
+                Li -- ne -- lių raut iš -- va -- rė.
+                Cit ne -- verk, mo -- čiut, ne -- su -- pus li -- nai,
+                Dro -- be -- lių pil -- nos skry -- nios.
+                Bet to -- kių drau -- gų, nuos -- ta -- bių drau -- gų
+                Dau -- giau ne -- be -- ma -- ty -- siu.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                Aš tų li -- nų ne -- ro -- viau,
+                Svir -- ne -- ly u -- lia -- vo -- jau.
+                Oi ly, oi ly, oi ly -- lia,
+                Svir -- ne -- ly u -- lia -- vo -- jau.
+            }
+        >>
+    \end{lilypond}
+
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
