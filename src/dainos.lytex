@@ -1065,6 +1065,79 @@
     \end{lilypond}
 
 
+    \DainosPavadinimas{Oi, ant kalno, ant aukštojo}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key bes \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative bes' {
+                        \partial 4 f8 f8 | bes4 d,8([ es8]) f8 g16([ f16]) | f4. es8 f8 f8 
+                        \time 2/4 f8 es8 d8 es8 | f4 f4 |
+                        \time 4/4 bes4 c8.([ bes16]) bes4.( f8) |
+                        \time 3/4 f8 c'8 bes8 a8 g8 f8 | g8.([ f16]) f4
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Oi, ant kal -- no, ant auk -- što -- jo
+                Sto -- vi bal -- ta ka -- rū -- nė -- lė.
+                O -- jo -- joi, sto -- vi bal -- ta ka -- rū -- nė -- lė.
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Vai ką tu ten pasiklosi?}
+        \DainosPosmas{2}Toje baltoj karūnėlėj\\*
+        Guli pilkas akmenėlis.\\*
+        Ojojoi, guli pilkas akmenėlis.
+        
+        \DainosPosmas{3}Ant to pilko akmenėlio\\*
+        Sėdi tėvas, motinėlė.\\*
+        Ojojoi, sėdi tėvas, motinėlė.
+        
+        \DainosPosmas{4}Sėdėdami gailiai verkia, ---\\*
+        Sav' sūnelį karan rengia.\\*
+        Ojojoi, sav' sūnelį karan rengia.
+        
+        \DainosPosmas{5}Vai sūneli, raitužėli,\\*
+        Vai ką tu ten pasiklosi?\\*
+        Ojojoi, vai ką tu ten pasiklosi?
+        
+        \DainosPosmas{6}Vai ką tu ten pasiklosi,\\*
+        Vai kuo tu ten užsiklosi?\\*
+        Ojojoi, vai kuo tu ten užsiklosi?
+        
+        \DainosPosmas{7}Gailių rasų pasiklosiu,\\*
+        O miglele užsiklosiu.\\*
+        Ojojoi, o miglele užsiklosiu.
+        
+        \DainosPosmas{8}Vai sūneli, raitužėli,\\*
+        Tu nujoki Vilniaus miestan.\\*
+        Ojojoi, tu nujoki Vilniaus miestan.
+        
+        \DainosPosmas{9}Tu nujoki Vilniaus miestan,\\*
+        Nusipirki tris triūbeles.\\*
+        Ojojoi, nusipirki tris triūbeles.
+        
+        \DainosPosmas{10}Pirma triūba užtriūbysi,\\*
+        Tėvą, močią pravirkdysi.\\*
+        Ojojoi, tėvą, močią pravirkdysi.
+        
+        \DainosPosmas{11}Antra triūba užtriūbysi,\\*
+        Vilniaus miestą pabudysi.\\*
+        Ojojoi, Vilniaus miestą pabudysi.
+        
+        \DainosPosmas{12}Trečia triūba užtriūbysi,\\*
+        Visą svietą sujudysi.\\*
+        Ojojoi, visą svietą sujudysi.
+    \end{DainosZodziai}
+
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
