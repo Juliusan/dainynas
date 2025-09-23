@@ -842,7 +842,6 @@
                             a8 a8 a8 a8 g8 f8 g4 f8 bes4. |  
                             c,4 c8 a'4 g8 f2. |
                         }
-                        \bar "|."
                     }
                 }
                 \new Voice = "second" {
@@ -856,7 +855,6 @@
                             f8 f8 f8 es8 es8 es8 d4 d8 des4. |  
                             c4 c8 c8 d8 e8 f2. |
                         }
-                        \bar "|."
                     }
                 }
             >>
@@ -967,7 +965,7 @@
                             \volta 1 {<g e>8 b,8 <g' e>8 <fis dis>8 e8([ <fis dis>8 <g e>8]) <a fis>8 |}
                             \volta 2 {<g e>8 b,8 <g' e>8 <fis dis>8 e4~ e4 |}
                         }
-                        \bar "||"
+                        \bar "|."
                     }
                 }
             >>
@@ -1136,6 +1134,60 @@
         Visą svietą sujudysi.\\*
         Ojojoi, visą svietą sujudysi.
     \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Ant kalno klevelis}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 2/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        d8 fis8 a8 fis8 | e4 d4 |
+                        <a' d,>4 <b g>4 | <a fis>2 |
+                        \repeat volta 2{
+                            <a fis>8 <b g>8 <a fis>8 <a e>8 | <fis d>4 <e a,>4 |
+                            <a fis>4 <a e>4 | <fis d>2
+                        }
+                        %\bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ant kal -- no kle -- ve -- lis sto -- vė -- jo,
+                Kle -- ve -- lio la -- pe -- liai mir -- gė -- jo.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                Kle -- ve -- lio la -- pe -- liai mir -- gė -- jo,
+                Bro -- lis ant žir -- ge -- lio sė -- dė -- jo.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "3. "
+                Bro -- lis ant žir -- ge -- lio sė -- dė -- jo,
+                Su jau -- na mer -- ge -- le kal -- bė -- jo.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "4. "
+                Su jau -- na mer -- ge -- le kal -- bė -- jo,
+                Ru -- de -- nė -- lį ves -- ti ža -- dė -- jo.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "5. "
+                Ru -- de -- nė -- lį ves -- ti ža -- dė -- jo,
+                O pats į ka -- ru -- žę iš -- jo -- jo.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "6. "
+                O pats į ka -- ru -- žę iš -- jo -- jo,
+                Už Lie -- tu -- vą gal -- vą pa -- dė -- jo.
+            }
+        >>
+    \end{lilypond}
 
 
     \cleardoublepage
