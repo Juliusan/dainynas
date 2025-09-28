@@ -1190,6 +1190,64 @@
     \end{lilypond}
 
 
+    \DainosPavadinimas{Žvaigždėtą naktį ant pečių}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 2/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        r8 <e c>8 <e c>8 <f d>8 | <g e>4 <e c>4 | <f d>8 <e c>8 <d g,>4 |
+                        r8 <e c>8 <e c>8 <f d>8 | <g e>4 <e c>4 | <a f>4 <g e>4 |
+                        \repeat volta 2{
+                            r8 <e c>8 <e c>8 <f d>8 | <g e>4 <e c>4 | <f d>8 <e c>8 <d g,>4 |
+                            r8 <a' f>8 <a f>8 <a f>8 | <g e>4. <f d>8 |
+                        }
+                        \alternative{
+                            \volta 1 {<g e>4 <e c>4 |}
+                            \volta 2 {<f d>4 <e c>4 |}
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Žvaig -- ždė -- tą nak -- tį ant pe -- čių
+                Iš -- sklei -- dęs pa -- ra -- šiu -- tą
+                \repeat volta 2{
+                    Tu nu -- si -- lei -- dai pu -- šy -- ne
+                    Ža -- liam ža -- liam, kaip 
+                }
+                \alternative{
+                    \volta 1 {rū -- ta.}
+                    \volta 2 {rū -- ta.}
+                }
+
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Kolei turėjai šovinių,}
+        \DainosPosmas{2}Tik išdavikė drebulė\\*
+        Nežemiškai šlamėjo.\\*
+        Tu sužavėtas užsnūdai,\\*
+        O priešas pastebėjo.
+        
+        \DainosPosmas{3}Buvai nuo budelių toli\\*
+        Negrįžti tu galėjai.\\*
+        Tiktai širdis nerimo vis ---\\*
+        Tėvynę tu mylėjai.
+        
+        \DainosPosmas{4}Kolei turėjai šovinių,\\*
+        Tolei narsiai kovojai,\\*
+        Paskutiniuoju pats save\\*
+        Tėvynei paaukojai.
+    \end{DainosZodziai}
+
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
