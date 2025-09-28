@@ -1230,7 +1230,7 @@
             }
         >>
     \end{lilypond}
-    \begin{DainosZodziai}{3}{Kolei turėjai šovinių,}
+    \begin{DainosZodziai}{2}{Kolei turėjai šovinių,}
         \DainosPosmas{2}Tik išdavikė drebulė\\*
         Nežemiškai šlamėjo.\\*
         Tu sužavėtas užsnūdai,\\*
@@ -1245,7 +1245,150 @@
         Tolei narsiai kovojai,\\*
         Paskutiniuoju pats save\\*
         Tėvynei paaukojai.
+        
+        \DainosPosmas{5}Dangun tu vėlei nuskridai\\*
+        Be šilko parašiuto.\\*
+        Sesės tau kapą apkaišys,\\*
+        Prisės tau daugel rūtų.
     \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Tykus vakars be vėjo}
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key e \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative e' {
+                        e4 b'4 fis4( b8) b8 | <gis e>8 <gis e>8 <gis e>4 <a fis>8 <gis e>8 <fis b,>4 |
+                        \repeat volta 2{}
+                        \alternative{
+                            \volta 1 {e8 <fis dis>8 <gis e>8 <a fis>8 <b gis>4 <cis a>8 <cis a>8 | <b gis>4 <b fis>4 <gis e>2 |}
+                            \volta 2 {<gis e>8 <fis b,>8 <gis e>8 <a fis>8 <b gis>4 <cis a>8 <cis a>8 | <b gis>4 <b fis>4 <gis e>2 |}
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ty -- kus va -- kars be vė -- jo, be vė -- jo,
+                \repeat volta 2{}
+                \alternative{
+                    \volta 1 {Lakš -- tin -- gė -- lė čiul -- bė -- jo, čiul -- bė -- jo.}
+                    \volta 2 {Lakš -- tin -- gė -- lė čiul -- bė -- jo, čiul -- bė -- jo.}
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Bėro žirgo neradau, neradau,}
+        \DainosPosmas{2}Po beržyną vaikščiojau, vaikščiojau,\\*
+        Bėro žirgo ieškojau, ieškojau.
+        
+        \DainosPosmas{3}Bėro žirgo neradau, neradau,\\*
+        Tik mergelę sutikau, sutikau.
+        
+        \DainosPosmas{4}Labas vakars, mergele, mergele,\\*
+        Ar nematei žirgelio, žirgelio?
+        
+        \DainosPosmas{5}Matyt mačiau žirgelį, žirgelį,\\*
+        Savo tėvo dvarelį, dvarelį.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Šią naktį per naktį}
+
+    Ši daina --- tenorų pasipuikavimas. Sėkmės nepasiimant per aukštos tonacijos.
+
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4. d8 \tuplet 3/2 {a'8 a8 a8} | b4. a8 g8 b8 a8 g8 | fis8 e4. 
+                        r8 d8 \tuplet 3/2 {<a' d,>8 <a d,>8 <a d,>8} | <b g>4. <a fis>8 <g e>8 <b g>8 <a fis>8 <g e>8 | <fis d>8 <e a,>4. 
+                        d8 fis8 e8 d8 | 
+                        \repeat volta 2{<d' b>4~( <d b>16[ <b g>16]) <b g>8 <b g>2 | <a fis>8 <a fis>8 <b g>8 <a fis>8 <g e>8([ <a fis>8]) <b g>8.([ <a fis>16]) |}
+                        \alternative{
+                            \volta 1 {<a fis>2 d,8 fis8 e8 d8 |}
+                            \volta 2 {<a' d,>2 r8 }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Šią nak -- tį per nak -- tį gai -- de -- liai gie -- do -- jo.
+                Šią nak -- tį per nak -- tį gai -- de -- liai gie -- do -- jo.
+                Ne -- gie -- do -- kit
+                \repeat volta 2{gai -- de -- liai, ne -- trum -- pin -- kit nak -- te -- }
+                \alternative{
+                    \volta 1 {lės. Ne -- gie -- do -- kit}
+                    \volta 2 {lės.}
+                }
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                \skip 1 Iš -- auš auš -- re -- lė, pa -- te -- kės sau -- le -- lė.
+                \skip 1 Iš -- auš auš -- re -- lė, pa -- te -- kės sau -- le -- lė.
+                Im -- sim bro -- liai
+                \repeat volta 2{dal -- ge -- lius, ei -- sim pjau -- ti šie -- ne -- }
+                \alternative{
+                    \volta 1 {lio. Im -- sim bro -- liai}
+                    \volta 2 {lio.}
+                }
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "3. "
+                \skip 1 Dar ne -- iš -- pjo -- viau a -- nei pra -- dal -- gė -- lės.
+                \skip 1 Dar ne -- iš -- pjo -- viau a -- nei pra -- dal -- gė -- lės.
+                Ant dal -- gės pa --
+                \repeat volta 2{si -- rė -- miau, ant dal -- ge -- lės ry -- mo -- }
+                \alternative{
+                    \volta 1 {jau. Ant dal -- gės pa}
+                    \volta 2 {jau.}
+                }
+            }
+        >>
+    \end{lilypond}
+    
+    Antrą (o gal ir trečią) posmus galima dainuoti ir taip (skirtumas abiejose triolėse):
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 \tuplet 3/2 {d8 a'8 a8} | b4. a8 g8 b8 a8 g8 | fis8 e4. 
+                        r4 \tuplet 3/2 {d8 <a' d,>8 <a d,>8} | <b g>4. <a fis>8 
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                Iš -- auš auš -- re -- lė, pa -- te -- kės sau -- le -- lė.
+                Iš -- auš auš -- re -- lė
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "3. "
+                Dar ne -- iš -- pjo -- viau a -- nei pra -- dal -- gė -- lės.
+                Dar ne -- iš -- pjo -- viau
+            }
+        >>
+    \end{lilypond}
+        
 
 
     \cleardoublepage
