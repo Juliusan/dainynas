@@ -580,7 +580,7 @@
         Daugiau neb'josiu pas tą panelę.
     \end{DainosZodziai}
 
-    \DainosPavadinimas{Bars, bars}
+    \DainosPavadinimas{Bars, bars (apie mergužėlę)}
     \begin{lilypond}
         <<
             \new Staff <<
@@ -652,6 +652,71 @@
         Tėvelis bars, bars,\\*
         Močiutė neužtars.
     \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Bars, bars (apie rožę)}
+    
+    Kartais ta pačia melodija gali būti ir visai kita daina\dots
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        d4 fis4  fis8 fis8 e8 d8 | <a' fis>4 <a fis>4 <a fis>8 <a fis>8 <b g>8 <a fis>8 |
+                        <a e>4 <a e>4 <a e>8 <b g>8 <a fis>8 <a e>8 | <fis d>4 <fis d>4 <fis d>8 <fis d>8 <a fis>8 <fis d>8 |
+                        \repeat volta 2{
+                            <e a,>4 <e a,>4. <e a,>8 <d b>8 <e cis>8 | <fis d>4 <a fis>4. <a fis>8 <b g>8 <a fis>8 |
+                            <a e>4 <a e>4. <b g>8 <a fis>8 <a e>8 | 
+                        }
+                        \alternative{
+                            \volta 1 {<fis d>4 <e a,>4 <fis d>8 <fis d>8 <a fis>8 <fis d>8 |}
+                            \volta 2 {<fis d>4 <e a,>4 <fis d>2 |}
+                        } 
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Aš pa -- sė -- jau ro -- žę pur -- pur -- pur -- pu -- ri -- nę,
+                Kaip ir ma -- no mei -- lę pir -- pir -- pir -- mu -- ti -- nę.
+                \repeat volta 2{
+                    Bars, bars tė -- ve -- lis, bars, bars, mo -- čiu -- tė,
+                    Bars, bars ir nie -- kas
+                }
+                \alternative{
+                    \volta 1 {ne -- už -- tars. Ir vė -- lei}
+                    \volta 2 {ne -- už -- tars.}
+                }
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "2. "
+                Ir iš -- dy -- go ro -- žė pur -- pur -- pur -- pu -- ri -- nė,
+                Kaip ir ma -- no mei -- lė pir -- pir -- pir -- mu -- ti -- nė.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "3. "
+                Ir už -- au -- go ro -- žė pur -- pur -- pur -- pu -- ri -- nė,
+                Kaip ir ma -- no mei -- lė pir -- pir -- pir -- mu -- ti -- nė.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "4. "
+                Ir pra -- žy -- do ro -- žė pur -- pur -- pur -- pu -- ri -- nė,
+                Kaip ir ma -- no mei -- lė pir -- pir -- pir -- mu -- ti -- nė.
+            }
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "5. "
+                Ir nu -- sky -- niau ro -- žę pur -- pur -- pur -- pu -- ri -- nę,
+                Kaip ir ma -- no mei -- lę pir -- pir -- pir -- mu -- ti -- nę.
+            }
+        >>
+    \end{lilypond}
+
 
     \DainosPavadinimas{Piemenaitė}
     \begin{lilypond}
@@ -1388,6 +1453,97 @@
             }
         >>
     \end{lilypond}
+
+
+    \DainosPavadinimas{Išėjo tėvelis į mišką}
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key f \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        f4 f8 c8 f4 f8 c8 | f4 f4 f4 r4|
+                        f4 f8 c8 f8 f8 f8 c8 | f4 f4 f4 r4|
+                        \repeat volta 2{
+                            <c' a>4 <c a>8 <c a>8 <d bes>8([ <c a>8]) <bes g>8 <a f>8 | <bes g>4 <bes g>8 <bes g>8 <c a>8 <bes g>8 <a f>8 <g c,>8 |
+                            <a f>4 <a f>8 <a f>8 <bes g>8 <a f>8 <g e>8 <f d>8 | <c' c,>4 <c c,>4 <c c,>4 r4 | 
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Iš -- ė -- jo tė -- ve -- lis į miš -- ką,
+                Iš -- ė -- jo mo -- ti -- nė -- lė į miš -- ką,
+                \repeat volta 2{
+                    Iš -- ė -- jo tė -- ve -- lis, iš -- ė -- jo mo -- ti -- nė -- lė,
+                    Iš -- ė -- jo vi -- si vai -- kai į  miš -- ką.
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Pamatė visi vaikai pelėdą.}
+        \DainosPosmas{2}Pamatė tėvelis pelėdą,\dots
+        
+        \DainosPosmas{3}Nušovė tėvelis pelėdą,\dots
+        
+        \DainosPosmas{4}Parnešė tėvelis pelėdą,\dots
+        
+        \DainosPosmas{5}Nupešė tėvelis pelėdą,\dots
+        
+        \DainosPosmas{6}Išvirė tėvelis pelėdą,\dots
+        
+        \DainosPosmas{7}Suvalgė tėvelis pelėdą,\dots
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Padainuokim atsistoję}
+    
+    Dainuojant šią dainą reiktų ir daryti, kas yra dainuojama: stovėti, sėdėti ar gulėti.
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        d8 e8 fis8 e8 a8 fis8 e8 d8 |
+                        <a' fis>4 <b g>8.([ <a fis>16]) <a fis>2 |
+                        \repeat volta 2{
+                            <a fis>8 <a fis>8 <b g>8 <a fis>8 <a fis>8 <g e>8 <g e>8 <e a,>8 |
+                            <a fis>4 <a e>8.([ <fis d>16]) <fis d>2
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Pa -- dai -- nuo -- kim at -- sis -- to -- ję,
+                O -- jo -- joi,
+                \repeat volta 2{
+                    Kaip paukš -- te -- liai ža -- liam go -- juj,
+                    O -- jo -- joi.
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{1}{Padainuokime sutūpę,}
+        \DainosPosmas{2}Padainuokime susėdę, ojojoi,\\*
+        Kaip paukšteliai vienasėdy, ojojoi.
+        
+        \DainosPosmas{3}Padainuokime sutūpę, ojojoi,\\*
+        Kaip paukšteliai palei upę, ojojoi.
+        
+        \DainosPosmas{4}Padainuokim atsigulę, ojojoi,\\*
+        Kaip paukšteliai prieš Mėnulį, ojojoi.
+    \end{DainosZodziai}
         
 
 
