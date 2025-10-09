@@ -1642,6 +1642,137 @@
         Tėviškėlę brangią\\*
         Vis regiu sapne.
     \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Ariau, ariau, ariau}
+    
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 8 e8 | g4 g8 f8([ e8]) d8 c4.( c4) e8 |
+                        g4 g8 f8([ e8]) d8 c4.( c4) c8 |
+                        \repeat volte 2 {
+                            c4 <c' a>8 <c a>4 <bes g>8 <a f>4.( <c a>4) <a f>8 |
+                        }
+                        \alternative{
+                            \volta 1 {<g e>4 <g e>8 <f d>8([ <e c>8]) <d g,>8 c4.( c4) c8 |}
+                            \volta 2 {<g' e>4 <g e>8 <f d>8([ <e c>8]) <d g,>8 c4.( c4)}
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                A -- riau, a -- riau, a -- riau
+                Ly -- giuo -- sius lau -- ke -- lius. A --
+                \repeat volta 2{
+                    tė -- jo mer -- ge -- lė At --
+                    \alternative{
+                        \volta 1 {ne -- šė pu -- sry -- čius, A}
+                        \volta 2 {ne -- šė pu -- sry -- čius.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Ir vėl ariau, ariau}
+        \DainosPosmas{2}Saulutė dėl dienos,\\*
+        Mėnulis dėl nakties,\\*
+        O mano mergelė\\*
+        Dėl ramumo širdies.
+        
+        \DainosPosmas{3}Paleisiu žirgelius\\*
+        Kad pasiganytų,\\*
+        Ateiki pas mane\\*
+        Kad nieks nematytų.
+
+        \DainosPosmas{4}Ir vėl ariau, ariau\\*
+        Lygiuosius laukelius,\\*
+        Atėjo mergelė\\*
+        Ir nieks nematė jos.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Ant kalno gluosnis}
+    
+    \begin{lilypond}
+        \layout {
+    \context {
+      \Score
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #0.5
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.basic-distance = #2
+      \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
+    }
+          \context {
+            \Lyrics
+            \override LyricSpace.minimum-distance = #0.5
+          }
+        }
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        r1 |
+                        d8 d8 e8 e8 fis2 |
+                        a8. b16 a8 g8 fis2 |
+                        \repeat volte 2 {
+                            a8. b16 a8 g8 a8 fis8 e8 d8 |
+                            d8 a'8 a8 g8 fis2 |
+                        }
+                    }
+                }
+                \new Lyrics \lyricsto "main" {
+                    \set stanza = "1. "
+                    An kal -- no gluos -- nis,
+                    Pa -- kal -- nėj šul' -- nys.
+                    \repeat volta 2{
+                        Ten vaikš -- čio -- jo mer -- gu -- žė -- lė
+                        Pa -- ti sau vie -- na.
+                    }
+                }
+            >>
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "dzium" {
+                    \autoBeamOff
+                    \relative d' {
+                        d4 d8 d8 d4 d8 d8 |
+                        d4 d8 d8 d4 d8 d8 |
+                    }
+                }
+                \new Lyrics \with { \override LyricText.font-size = #-2 } \lyricsto "dzium" {
+                    Džium džium džium, džium džium džium,
+                    Džium džium džium, džium džium džium,
+                }
+            >>
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Duok žirgui vandens.}
+        \DainosPosmas{2}Jojo bernelis\\*
+        Žirgo girdyti.\\*
+        Sustok, palauk, mergužėle,\\*
+        Duok žirgui vandens.
+        
+        \DainosPosmas{3}Negaliu stovėt,\\*
+        Su tavim kalbėt.\\*
+        Šalta rasa, o aš basa,\\*
+        Nušals kojelės.
+    \end{DainosZodziai}
+    
+    Žinoma, ,,džium, džium, džium`` turi būti kartojama visą dainą. Beje, dainuojama ne ,,gluos\-nis``, o ,,gluosnys``, bet labai jau gramatiškai neteisinga taip rašyti.
         
 
 
