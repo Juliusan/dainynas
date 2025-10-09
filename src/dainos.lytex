@@ -1703,18 +1703,6 @@
     \DainosPavadinimas{Ant kalno gluosnis}
     
     \begin{lilypond}
-        \layout {
-    \context {
-      \Score
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #0.5
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.basic-distance = #2
-      \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
-    }
-          \context {
-            \Lyrics
-            \override LyricSpace.minimum-distance = #0.5
-          }
-        }
         \new ChoirStaff<<
             \new Staff <<
                 \key d \major
@@ -1725,10 +1713,10 @@
                     \relative d' {
                         r1 |
                         d8 d8 e8 e8 fis2 |
-                        a8. b16 a8 g8 fis2 |
+                        <a fis>8. <b g>16 <a fis>8 <g e>8 <fis d>2 |
                         \repeat volte 2 {
-                            a8. b16 a8 g8 a8 fis8 e8 d8 |
-                            d8 a'8 a8 g8 fis2 |
+                            <a fis>8. <b g>16 <a fis>8 <g e>8 <a fis>8 <fis d>8 <e a,>8 <d fis,>8 |
+                            d8 <a' fis>8 <a fis>8 <g e>8 <fis d>2 |
                         }
                     }
                 }
@@ -1755,7 +1743,7 @@
                 }
                 \new Lyrics \with { \override LyricText.font-size = #-2 } \lyricsto "dzium" {
                     Džium džium džium, džium džium džium,
-                    Džium džium džium, džium džium džium,
+                    džium džium džium, džium džium džium,
                 }
             >>
         >>
