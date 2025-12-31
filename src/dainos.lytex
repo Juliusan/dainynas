@@ -1954,6 +1954,77 @@
     \end{DainosZodziai}
 
 
+    \DainosPavadinimas{Balnokit, broliai, žirgus}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key f \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        \partial 4 c4 | f4. f8 e8 f8 | g4 c,4 c4 |
+                        <g' e>4. <g e>8 <f d>8 <g e>8 | <a f>4 f4 f4 |
+                        \repeat volte 2 {
+                        <d' bes>4. <d bes>8 <c a>8 <d bes>8 | <c a>4 <a f>4 <c a>4 |
+                            \alternative{
+                                \volta 1 {<bes g>4 <g c,>4 <c a>4 | <a f>2 f4}
+                                \volta 2 {<bes g>4 <g c,>4 <c a>4 | <a f>2 }
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Bal -- no -- kit, bro -- liai žir -- gus,
+                Bal -- no -- kit, bro -- liai žir -- gus,
+                Bal --
+                \repeat volte 2 {
+                no -- kit, bro -- liai žir -- gus, reiks
+                    \alternative{
+                        \volta 1 {ka -- ran jo -- ti. Bal}
+                        \volta 2 {ka -- ran jo -- ti.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{O jeigu aš negrįšiu,}
+        \DainosPosmas{2}Paduok, sesule, kardą,\\*
+        reiks priešą kirsti.
+
+        \DainosPosmas{3}O jeigu aš negrįšiu,\\*
+        Žirgelis parneš.
+
+        \DainosPosmas{4}Ant mano smėlio kapo\\*
+        Berželis žaliuos.
+
+        \DainosPosmas{5}O tam žaliam beržely,\\*
+        Gegutė kukuos.
+
+        \DainosPosmas{6}O toj raiboj gegutėj,\\*
+        širdelė plazdės.
+
+        \DainosPosmas{7}O toj mažoj širdelėj,\\*
+        Dainelė skambės.
+
+        \DainosPosmas{8}O toj skambioj dainelėj,\\*
+        Visa Lietuva.
+    \end{DainosZodziai}
+
+    Šitos dainos posmų yra daug variantų, o ir prikurti jų galima pagal
+    poreikį. Bent vieną tikrai žinau apie tai, kaip visoj Lietuvoj lietuviai
+    dainuos. Bet man kažkaip keista --- apie dainelę jau buvo, kam vėl grįžti?
+    Lietuviai gali dainuoti mažoj širdelėj, o toj dainelėj būti visa Lietuva,
+    bet gal nuosekliau, kai širdelėje yra dainelė. Žodžiu, šita daina netgi
+    gali būti be pabaigos nuo posmų gausos, o čia surašiau tuos, kuriuos žinau
+    ir kurie man atrodo logiškiausi.
+
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
