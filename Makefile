@@ -6,6 +6,7 @@ dainos.pdf: build/dainos.tex build/titulinis.tex build/komandos.tex build/turiny
 
 build/dainos.tex: src/dainos.lytex
 	lilypond-book -f latex -I src/ -o build/ --lily-output-dir=build/ dainos.lytex
+	rm -f *.idx *.out
 
 build/%.tex: src/%.tex
 	cp $< $@

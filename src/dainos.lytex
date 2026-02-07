@@ -1609,7 +1609,7 @@
                             g4 g8 e4 c8 a'8 g4( g4.) |
                             d8([ e8]) f8 e4 d8 c2. |
                         }
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                             c4 <c' a>8 <c a>4 <b g>8 <b g>8 <a f>4( <a f>4.) |
                             <a f>8([ <b g>8]) <c a>8 <b g>4 <a f>8 <g e>2. |
                             <g e>4 <g e>8 <a f>4 <g e>8 <g e>8 <f d>4( <f d>4.) |
@@ -1661,7 +1661,7 @@
                     \relative e' {
                         e8. e16 e4 gis4 | b4 b2 |
                         <b gis>8. <b gis>16 <a fis>4 <gis e>4 | <fis b,>2. |
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                             <cis' a>8. <cis a>16 <b gis>4 <a fis>4 | <gis e>4 <b gis>2 |
                             <gis e>8 <fis b,>8 <b gis>4 <b gis>4 | <gis e>2.
                         }
@@ -1705,7 +1705,7 @@
                     \relative c' {
                         \partial 8 e8 | g4 g8 f8([ e8]) d8 c4.( c4) e8 |
                         g4 g8 f8([ e8]) d8 c4.( c4) c8 |
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                             c4 <c' a>8 <c a>4 <bes g>8 <a f>4.( <c a>4) <a f>8 |
                         }
                         \alternative{
@@ -1762,7 +1762,7 @@
                         r1 |
                         d8 d8 e8 e8 fis2 |
                         <a fis>8. <b g>16 <a fis>8 <g e>8 <fis d>2 |
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                             <a fis>8. <b g>16 <a fis>8 <g e>8 <a fis>8 <fis d>8 <e a,>8 <d fis,>8 |
                             d8 <a' fis>8 <a fis>8 <g e>8 <fis d>2 |
                         }
@@ -1826,7 +1826,7 @@
                     \relative f' {
                         f4( e8) f8 g4 f4 | e4 d4 c2 |
                         f4 <g e>4 <a f>4 <a f>4 | <bes g>4 <g e>4 <a f>2 |
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                             <a f>4( <g e>8) <a f>8 <bes g>4 <c a>4 | <a f>4 <c a>4 <g c,>4 <g c,>4 |
                             <f d>4( <e c>8) <f d>8 <g e>4( <c g>8) <c g>8 |
                             \alternative{
@@ -1834,7 +1834,7 @@
                                 \volta 2 {<a f>4 <a f>4 <a f>2 |}
                             }
                         }
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                             <a f>4 <a f>4 <a f>2 | <a f>8 <c a>8 <bes g>8 <a f>8 <c g>2 |
                             <g c,>4. <g c,>8 <g c,>4( <c g>8.) <c g>16 | <a f>8. <a f>16 <a f>8 <g c,>8 <a f>2 |
                         }
@@ -1853,7 +1853,7 @@
                         \volta 2 {jau -- na -- sai.}
                     }
                 }
-                \repeat volte 2 {
+                \repeat volta 2 {
                     Viens du trys, gra -- ži Lie -- tu -- va,
                     Kaip gė -- le -- lė žy -- di vi -- sa -- da.
                 }
@@ -1967,7 +1967,7 @@
                     \relative f' {
                         \partial 4 c4 | f4. f8 e8 f8 | g4 c,4 c4 |
                         <g' e>4. <g e>8 <f d>8 <g e>8 | <a f>4 f4 f4 |
-                        \repeat volte 2 {
+                        \repeat volta 2 {
                         <d' bes>4. <d bes>8 <c a>8 <d bes>8 | <c a>4 <a f>4 <c a>4 |
                             \alternative{
                                 \volta 1 {<bes g>4 <g c,>4 <c a>4 | <a f>2 f4}
@@ -1983,7 +1983,7 @@
                 Bal -- no -- kit, bro -- liai žir -- gus,
                 Bal -- no -- kit, bro -- liai žir -- gus,
                 Bal --
-                \repeat volte 2 {
+                \repeat volta 2 {
                 no -- kit, bro -- liai žir -- gus, reiks
                     \alternative{
                         \volta 1 {ka -- ran jo -- ti. Bal}
@@ -2023,6 +2023,122 @@
     bet gal nuosekliau, kai širdelėje yra dainelė. Žodžiu, šita daina netgi
     gali būti be pabaigos nuo posmų gausos, o čia surašiau tuos, kuriuos žinau
     ir kurie man atrodo logiškiausi.
+
+
+    \DainosPavadinimas{Oi, ko nusižvengei}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        d8. e16 <fis d>4 <e a,>4 | <g e>4 <fis d>2 |
+                        <fis d>8. <g e>16 <a fis>4 <fis d>4 | <b g>4 <a fis>2 |
+                        \repeat volta 2 {
+                            <b g>8. <b g>16 <b g>4 <g e>4 | <b g>4 <a fis>2 |
+                            <a fis>8. <a fis>16 <g e>4 <e a,>4 | <a fis>4 <fis d>2
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Oi, ko nu -- si -- žven -- gei,
+                Bė -- ra -- sai žir -- ge -- li?
+                \repeat volta 2 {
+                    Ko  dai -- rais ap -- link -- kuj
+                    Į dul -- kė -- tą ke -- lią?
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Vėliavą iškelsiu.}
+        \DainosPosmas{2}Tas kelias į Vilnių,\\*
+        Gedimino pilį.\\*
+        Ten kur mūsų broliai\\*
+        Vargsta už Tėvynę.
+
+        \DainosPosmas{3}O kai aš užaugsiu,\\*
+        Tai narsiai kariausiu:\\*
+        Gedimino pily\\*
+        Vėliavą iškelsiu.
+
+        \DainosPosmas{4}Vėliavą iškelsiu\\*
+        Ne tiktai raudoną:\\*
+        Viduryje žalią,\\*
+        O viršuj geltoną.
+
+        \DainosPosmas{5}Gedimino pily\\*
+        Vėliavą iškelsiu,\\*
+        O prie Aušros vartų\\*
+        Karštai pasimelsiu.
+
+        \DainosPosmas{6}Dieve Visagali,\\*
+        Saugok mūsų šalį,\\*
+        Tėvą ir močiutę,\\*
+        Brolį ir sesutę.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Į Vilnių, į Vilnių}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 16 e16 | <d g,>4 <d g,>8. <e c>16 <f d>4 <e c>8. <d g,>16 |
+                        <e c>4 <e c>8. <f d>16 <g e>4 <e c>8. <e c>16 |
+                        <d g,>4 <d g,>8. <e c>16 <f d>4 <e c>8. <d g,>16 |
+                        <e c>4 <e c>8. <f d>16 <g e>4.. c,16 |
+                        \repeat volta 2 {
+                            <a' f>4 <a f>8. <b g>16 <c a>4 <b g>8. <a f>16 |
+                            <a f>4 <g e>8. <a f>16 <g e>4 <e c>8. <g e>16 |
+                            <g e>4 <a f>8. <g e>16 <g e>4 <f d>8. <e c>16 |
+                            \alternative{
+                                \volta 1 {<f d>4 <g e>8. <f d>16 <e c>4.. c16}
+                                \volta 2 {<f d>4 <g e>8. <f d>16 <e c>4..}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Į Vil -- nių, į Vil -- nių vi -- si, kas  tik ga -- li,
+                Ne -- žiū -- rint į skai -- čių bal -- tų -- jų a -- rų.
+                Į
+                \repeat volta 2 {
+                    Vil -- nių, į Vil -- nių, tą my -- li -- mą ša -- lį,
+                    Ten prie Ge -- di -- mi -- no prie
+                    \alternative{
+                        \volta 1 {bro -- lių sa -- vų. Į}
+                        \volta 2 {bro -- lių sa -- vų.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Tada pailsėsim, kada tiktai Vilniuj}
+        \DainosPosmas{2}Ten broliai mūs' laukia Erelio prispausti.\\*
+        Belaukdami mūsų pražiūri akis.\\*
+        O mes čia sustoję stebuklo tik laukiam,\\*
+        Kada mūs' šalelėj aušrelė nušvis.
+
+        \DainosPosmas{3}Tad broliai budėkim ir laukim to laiko,\\*
+        Kai vadas galingas mums ženklą paduos.\\*
+        Tada pailsėsim, kada tiktai Vilniuj\\*
+        Pily Gedimino Vytis plevesuos.
+    \end{DainosZodziai}
 
 
     \cleardoublepage
