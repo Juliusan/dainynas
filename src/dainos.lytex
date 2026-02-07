@@ -2141,6 +2141,99 @@
     \end{DainosZodziai}
 
 
+    \DainosPavadinimas{Eisim, broleliai, namo}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 3/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        a'8 a8 a8 | a8 fis8 d8 | <d' b>4 <b g>8 | <a fis>4 <a fis>8 |
+                        \repeat volta 2 {
+                            <a fis>8 <b g>8 <a fis>8 | <g e>8 <fis d>8 <e a,>8 | <a fis>4 <g e>8 |
+                            \alternative{
+                                \volta 1 {<fis d>4 <a fis>8}
+                                \volta 2 {<fis d>4. }
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ei -- sim, bro -- le -- liai, na -- mo, na -- mo.
+                \repeat volta 2 {
+                    Jau -- nie -- ji bro -- le -- liai, na -- mo, na --
+                    \alternative{
+                        \volta 1 {mo. Jau}
+                        \volta 2 {mo.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Eisim, sesutės, namo, namo,}
+        \DainosPosmas{2}Rasim tėvelį belaukiantį,\\*
+        Rankoje dirželį belaikantį.
+
+        \DainosPosmas{3}Eisim, sesutės, namo, namo,\\*
+        Jaunosios sesutės, namo, namo.
+
+        \DainosPosmas{3}Rasim močiutę belaukiančią,\\*
+        Rankoje rykštelę belaikančią.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Vėjas ūžia, propeleriai kaukia}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key g \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative g' {
+                        d4 fis4 a4 fis4 | a8. g16 fis8 e8 d4 d4 |
+                        d4 <fis d>4 <a fis>4 <a fis>4 | <b g>8. <a fis>16 <g e>8 <a fis>8 <b g>2 |
+                        \repeat volta 2 {
+                            <g e>4 <a fis>4 <b g>4 <b g>4 | <c a>8. <b g>16 <a fis>8 <g e>8 <a fis>4 <a fis>4 |
+                            <fis d>4 <g e>4 <a fis>4 <a fis>4 | <b g>8. <a fis>16 <g e>8 <a d,>8 <b g>2
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Vė -- jas ū -- žia, pro -- pe -- le -- riai kau -- kia,
+                Es -- kad -- ri -- lė pa -- ki -- lo auk -- štai.
+                \repeat volta 2 {
+                    Žyd -- ros a -- kys su -- ži -- ba pro kau -- kę,
+                    Su -- diev, že -- me ir ža -- li lau -- kai.
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Man pasaulis dar yra platus.}
+        \DainosPosmas{2}Sudiev tau, aerodrome žavingas,\\*
+        Man pasaulis dar yra platus.\\*
+        Vėjas veidą glosto ir bučiuoja\\*
+        Ir vilioja skristi į dausas.
+
+        \DainosPosmas{3}Aš nuskrisiu, kur gimta sodyba,\\*
+        Kur gyvena močiutė sena.\\*
+        Ir apsuksiu žiaurią mirties kilpą,\\*
+        Lai pamato mane mylima.
+    \end{DainosZodziai}
+
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
