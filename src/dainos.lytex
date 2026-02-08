@@ -2184,7 +2184,7 @@
         \DainosPosmas{3}Eisim, sesutės, namo, namo,\\*
         Jaunosios sesutės, namo, namo.
 
-        \DainosPosmas{3}Rasim močiutę belaukiančią,\\*
+        \DainosPosmas{4}Rasim močiutę belaukiančią,\\*
         Rankoje rykštelę belaikančią.
     \end{DainosZodziai}
 
@@ -2231,6 +2231,64 @@
         Kur gyvena močiutė sena.\\*
         Ir apsuksiu žiaurią mirties kilpą,\\*
         Lai pamato mane mylima.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Palinko liepa šalia kelio}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 fis4 | a4. fis8 g8. fis16 g8 a8 | fis4 fis2 fis4 |
+                        a4. fis8 g8. fis16 g8 a8 | fis2. a4 |
+                        \repeat volta 2 {
+                            \time 3/4 a4 a4. a8 | \time 2/4 b8. a16 g8 a8 | \time 4/4 b4 a2 fis4 |
+                            a4. fis8 g8. fis16 g8 a8 |
+                            \alternative{
+                                \volta 1 {fis2. a4 |}
+                                \volta 2 {fis2.}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Pa -- lin -- ko lie -- pa ša -- lia ke -- lio,
+                Pra -- vir -- ko mo -- ti -- na se -- na.
+                \repeat volta 2 {
+                    Sū -- ne -- li, Tė -- vy -- nė ta -- ve šau -- kia
+                    Ir vėl bus lais -- va Lie -- tu --
+                    \alternative{
+                        \volta 1 {va. Sū}
+                        \volta 2 {va.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Nuo priešo budelio rankos.}
+        \DainosPosmas{2}O jeigu teks man iškeliauti\\*
+        Iš šios žemelės mylimos,\\*
+        Mergaite, tu manęs neliūdėki,\\*
+        Aš vėl sugrįšiu pas tave.
+
+        \DainosPosmas{3}O jeigu žūsiu už Tėvynę,\\*
+        Nuo priešo budelio rankos.\\*
+        Mergaite, ir mirdamas kartosiu:\\*
+        ,,Myliu Tėvynę ir tave``.
+
+        \DainosPosmas{4}Laukais pavasaris jau eina,\\*
+        Lakštutė čiulba vakarais.\\*
+        Mergaite, papuošk kareivio kapą\\*
+        Baltais akacijų žiedais.
     \end{DainosZodziai}
 
 
