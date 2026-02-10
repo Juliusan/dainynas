@@ -2346,7 +2346,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Dau daug dainelių}
+    \DainosPavadinimas{Daug daug dainelių}
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -2413,6 +2413,59 @@
         Toli nuo savo gimtų namų.
     \end{DainosZodziai}
 
+
+    \DainosPavadinimas{Stoviu aš parimus}
+    %https://ve.lt/gyvenimas/kultura/neklauskit-dainiaus-vardo-arba-as-verkiau-parimus
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        <g' e>4 <g e>8 <g e>4 <f d>8 <e c>4.~ <e c>4 <d g,>8 |
+                        c4 c8 <a' f>4 <g e>8 <g e>4.~ <g e>4 <f d>8 |
+                        <f d>4 <f d>8 <f d>4 <e c>8 <d g,>4.~ <d g,>4 <d g,>8 |
+                        <g e>4 <g e>8 <a f>8([ <g e>8]) <f d>8 <e c>2. |
+                        \repeat volta 2 {
+                            <c' a>4 <c a>8 <c a>4 <b g>8 <a f>4.~ <a f>4 <a f>8 |
+                            <a f>4 <b g>8 <d b>8([ <c a>8]) <a f>8 <g e>4.~ <g e>4 <e c>8 |
+                            <g e>4 <g e>8 <a f>4 <g e>8 <b g>4.~ <b g>4 <a f>8 |
+                            <g e>4 <g e>8 <a f>8([ <g e>8]) <f d>8 <e c>2. |
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Sto -- viu aš pa -- ri -- mus prie rū -- tų dar -- že -- lio,
+                Kai pas -- pau -- dus ran -- ką ty -- liai iš -- ė -- jai.
+                \repeat volta 2 {
+                    A -- ša -- rom si -- dab -- ro ver -- kė rū -- tos ža -- lios,
+                    Ver -- kė ū -- ka -- no -- se pas -- ken -- dę miškai.
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{1}{Kas akis manąsias atras lino žiede}
+        \DainosPosmas{2}Kas paklaus, kodėl gi ašaros taip byra?\\*
+        Kas man ravint rūtas ,,padėk Diev'`` sakys?\\*
+        Kas akis manąsias atras lino žiede?\\*
+        Kas, o kas, o kas gi mane nuramins?
+
+        \DainosPosmas{3}Lengvai mėto šeivą staklės ąžuolinės,\\*
+        Tiesias plonos gijos taip margai, margai.\\*
+        Rankšluostin įausiu ,,Lietuva, Tėvyne,\\*
+        Tu didvyrių žemė, mes Tavo vaikai``.
+
+        \DainosPosmas{4}O kada žemelė bus nuo kraujo soti\\*
+        Ir kada sugrįši tu su žirgeliu.\\*
+        Atnešiu vandens tau moliniam ąsoty,\\*
+        Duosiu nusišluostyt rankšluosčiu nauju.
+    \end{DainosZodziai}
 
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
