@@ -2467,6 +2467,116 @@
         Duosiu nusišluostyt rankšluosčiu nauju.
     \end{DainosZodziai}
 
+
+    \DainosPavadinimas{Neliūdėk, motule, kad prie Kūčių stalo}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \minor
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        c4 <g' es>8 <g es>4 <es c>8 <f d>4 <d b>8~ <d b>4. |
+                        <f d>4 <g es>8 <es c>4 <d b>8 <es c>4 c8~ c4. |
+                        c4 <g' es>8 <g es>4 <es c>8 <f d>4 <d b>8~ <d b>4. |
+                        <f d>4 <f d>8 <es c>4 <f d>8 <g es>2. |
+                        \repeat volta 2 {
+                            c,4 <c' as>8 <c as>4 <bes g>8 <c as>4 <as f>8~ <as f>4. |
+                            <as f>4 <bes g>8 <c as>4 <bes g>8 <as f>4 <g es>8~ <g es>4. |
+                            <g es>4 <as f>8 <g es>4 <es c>8 <f d>4 <d b>8~ <d b>4. |
+                            \alternative{
+                                \volta 1 {<f d>4 <f d>8~ <f d>8 <es c>8 <f d>8 <g es>2. |}
+                                \volta 2 {<f d>4 <g es>8 <es c>4 <d b>8 c2.}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ne -- liū -- dėk, mo -- tu -- le, kad prie Kū -- čių sta -- lo
+                Šį -- met vie -- na vie -- ta pa -- si -- liks tuš -- čia.
+                \repeat volta 2 {
+                    Kad ne -- lauš iš ran -- kos tau bal -- tos plot -- ke -- lės
+                    Tas, kur per -- nai lau -- žė
+                    \alternative{
+                        \volta 1 {ir dar bu -- vo čia.}
+                        \volta 1 {ir dar bu -- vo čia.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Prie apkrauto stalo su visa šeima.}
+        \DainosPosmas{2}Aš žinau, tu sėsi, poterius kalbėsi\\*
+        Prie apkrauto stalo su visa šeima.\\*
+        Mane prisiminus gailiai tu raudosi,\\*
+        Ašarą nubrauksi šilko skarele.
+
+        \DainosPosmas{3}Neliūdėk, motule, šičia aš ne vienas\\*
+        Toli nuo Tėvynės, nuo gimtų namų.\\*
+        Daugelis nevalgo Kūčių vakarienės,\\*
+        Daugelis dar ilgisi gimtų namų.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Jei ne auksinės vasaros}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 5/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 8 d8 |
+                        <fis d>8 <fis d>8 <e a,>8 <e a,>8 <a fis>8. <g e>16 <fis d>4. d8 |
+                        <fis d>8 <fis d>8 <e a,>8 <e a,>8 <a fis>4 <fis d>4. <a fis>8 |
+                        \repeat volta 2 {
+                            <a fis>8 <a fis>8 <b g>8 <a fis>8 <a e>8 <fis d>8 <e a,>4. <e a,>8 |
+                            \alternative{
+                                \volta 1 {<g e>8 <g e>8 <fis d>8 <g e>8 <a fis>4 <fis d>4. <a fis>8 |}
+                                \volta 2 {<g e>8 <g e>8 <fis d>8 <g e>8 <a fis>4 <fis d>4.}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Jei ne auk -- si -- nės va -- sa -- ros,
+                Ne mė -- ly -- nos vo -- sil -- kos,
+                Ne --
+                \repeat volta 2 {
+                    bū -- tu -- me a -- tė -- ję čia,
+                    Kur
+                    \alternative{
+                        \volta 1 {slen -- ka die -- nos pil -- kos. Ne}
+                        \volta 1 {slen -- ka die -- nos pil -- kos.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Tas pievas, kur žaliavo.}
+        \DainosPosmas{2}Kur tas dulkėtas traukinys\\*
+        Taip toli nuvažiavo?\\*
+        Prisimenu, mamyte, aš\\*
+        Tas pievas, kur žaliavo.
+
+        \DainosPosmas{3}Išeisiu vieną vakarą,\\*
+        Išeisiu ir negrįšiu.\\*
+        Žydės vosilkos pakely,\\*
+        Bet tu jų nematysi.
+    \end{DainosZodziai}
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
