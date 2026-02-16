@@ -2577,6 +2577,159 @@
         Bet tu jų nematysi.
     \end{DainosZodziai}
 
+
+    \DainosPavadinimas{Gražių dainelių daug girdėjau}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 8 <g' e>8 |
+                        \repeat volta 2 {
+                            <g e>4 <e c>8 <f d>4 <a f>8 <g e>4 <e c>8 <e c>8 <e c>8 <g e>8 |
+                            \alternative{
+                                \volta 1 {<f d>4 <e g,>8 <f d>4 <g e>8 <e c>4 <e c>8 <e c>4 <g e>8 |}
+                                \volta 2 {<f d>4 <e g,>8 <f d>4 <g e>8 <e c>4 <e c>8 <e c>4. |}
+                            }
+                        }
+                        \repeat volta 2 {
+                            \time 9/8
+                            <g e>8 <g e>8 <c a>8 <b g>4. <a f>4. |
+                            d,4 <a' f>8 <a f>4. <g e>4. |
+                            \time 12/8
+                            <e c>8 <e c>8 <g e>8 <a f>4 <g e>8 <f d>4 <g e>8 <e c>4
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Gra --
+                \repeat volta 2 {
+                    žių dai -- ne -- lių daug gir -- dė -- jau
+                    Ty --
+                    \alternative{
+                        \volta 1 {liuo -- ju va -- sa -- ros lai -- ku. Gra}
+                        \volta 2 {liuo -- ju va -- sa -- ros lai -- ku.}
+                    }
+                }
+                \repeat volta 2 {
+                    Bet, kai į to -- lį jas ly -- dė -- jau,
+                    Ne -- bu -- vo liū -- dna nei klai -- ku.
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Širdis pamilo taip karštai.}
+        \DainosPosmas{2}Tik vieną dainą vakarinę\\*
+        Širdis pamilo taip karštai.\\*
+        Ir neberimsta, kol Aušrinę\\*
+        Užmerkia brėkšdami rytai.
+
+        \DainosPosmas{3}Gaili ji buvo, kaip gegutės\\*
+        Graudingos raudos tylumoj.\\*
+        Graži, kaip čiulbesiai laukštutės\\*
+        Žaliam gojely sutemoj.
+
+        \DainosPosmas{4}Aidužiai blaškėsi ir gaudė\\*
+        Ir žemė klausė jos maldos.\\*
+        O vakarai slapčia nuraudę\\*
+        Taip nežėrėjo niekados.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Močiute, motinėle}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key f \major
+                \time 9/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        f8 f8 c8 f4 <g e>8 <a f>4 <bes g>8 |
+                        <c a>8 <c a>8 <bes g>8 <a f>4 <g c,>8 f4 c8 |
+                        \repeat volta 2 {
+                            \time 6/8
+                            <c' a>8 <a f>8 <bes g>8 <a f>4 <g c,>8 |
+                            f8 f8 <g e>8 <a f>4 <bes g>8 |
+                            \time 9/8
+                            \alternative{
+                                \volta 1 {<c a>8 <a f>8 <bes g>8 <a f>4 <g c,>8 f4 c8 |}
+                                \volta 2 {<c' a>8 <a f>8 <bes g>8 <a f>4 <g c,>8 f4~ f8 |}
+                            }
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Mo -- čiu -- te mo -- ti -- nė -- le,
+                Mo -- čiu -- te sen -- gal -- vė -- le,
+                \repeat volta 2 {
+                    Ga -- na pa -- il -- sai,
+                    Ga -- ne nu -- var -- gai,
+                    \alternative{
+                        \volta 1 {Kol ma -- ne iš -- auk -- lė -- jai.}
+                        \volta 2 {Kol ma -- ne iš -- auk -- \set ignoreMelismata = ##t lė -- (jai). \unset ignoreMelismata}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+
+
+    \DainosPavadinimas{Ar aš tau, sese, nesakiau}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key a \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative a {
+                        \partial 8 <cis a>8 |
+                        <e cis>4 <e cis>8 <fis d>4 <fis d>8 <gis e>4 <b d,>8 <a cis,>4 cis,8 |
+                        <e cis>4 <e cis>8 <fis d>4 <fis d>8 <gis e>4 <b d,>8 <a cis,>4. |
+                        \repeat volta 2 {
+                            <a cis,>8 <a cis,>8 <a cis,>8 <d fis,>4 <d fis,>8 <cis e,>4 <d fis,>8 <cis e,>4. |
+                            <a cis,>8 <a cis,>8 <e cis>8 <cis' e,>4 <cis e,>8 <b d,>4 <gis d>8 <a cis,>4. |
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ar aš tau, se -- se, ne -- sa -- kiau?
+                Ar aš žo -- de -- lio ne -- ta -- riau?
+                \repeat volta 2 {
+                    „Iš -- šluok kie -- me -- lį su -- ba -- toj,
+                    At -- jos ber -- ne -- lis ne -- dė -- lioj.“
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Atjos ir šelmis bernelis,}
+        \DainosPosmas{2}Atjojo broliai septyni\\*
+        Ir jų tarnaičiai devyni.\\*
+        Atjos ir šelmis bernelis,\\*
+        Kiek jis iškadų pridarys!
+
+        \DainosPosmas{3}Pririšo žirgą prie tvoros,\\*
+        Prie lelijėlės ir rūtos.\\*
+        Pamuistė žirgas galvelę,\\*
+        Išlaužė uosio tvorelę.
+    \end{DainosZodziai}
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
