@@ -2730,6 +2730,174 @@
         Išlaužė uosio tvorelę.
     \end{DainosZodziai}
 
+
+    \DainosPavadinimas{Tūkstantis žingsnelių}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \repeat volta 2 {
+                            <a' fis>8 <a fis>8 <a fis>4. <fis d>8 <g e>8 <a fis>8 |
+                            <b g>8 <b g>8 <b g>4. <g e>8 <e cis>8 <e cis>8 |
+                            <cis' a>8 <cis a>8 <cis a>4. <b g>8 <a fis>8 <g e>8 |
+                            \alternative{
+                                \volta 1 {<fis d>8 <a fis>8 <d a>4. <a fis>8 <fis d>8 <g e>8 |}
+                                \volta 2 {<fis d>8 <a fis>8 <d a>4. <d a>8 <d a>8~ <d a>8 |}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Tūk -- stan -- tis žing -- sne -- lių
+                Lig ta -- vo na -- me -- lių.
+                Ka -- da aš nu -- jo -- siu
+                Pas sa -- vo mer -- ge -- lę?
+            }
+            \new Lyrics \lyricsto "main" {
+                Ram -- ta -- dry -- lia -- ly -- lia,
+                Ram -- ta -- dry -- lia -- lia -- lia,
+                Ka -- da aš nu -- jo -- siu
+                \skip 8 \skip 8 \skip 4. \skip 8 \skip 8 \skip 8
+                Pas sa -- vo mer -- \set ignoreMelismata = ##t ge -- (lę)? \unset ignoreMelismata
+            }
+        >>
+    \end{lilypond}
+
+
+    \DainosPavadinimas{Ėjo senis lauko arti}
+
+    \begin{lilypond}
+        OiLyLia = \relative es' {
+            <c' as>8. <c as>16 <c as>4. <es c>8 <d bes>8 <c as>8 |
+            <es c>8. <bes g>16 <bes g>4. <bes g>8 <c as>8 <bes g>8 |
+            <d bes>8. <d bes>16 <d bes>8 <c as>4. <bes g>8 <as f>8 |
+        }
+        OiLyLiaVa = \relative es' {
+            <g es>4 <es' c>4 <d bes>4 <des a>4 |
+        }
+        \new ChoirStaff<<
+            \new Staff <<
+                \key es \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative es' {
+                        r2. es8 bes8 |
+                        \time 3/4
+                        \repeat volta 2 {
+                            es4. g8 f8 es8 |
+                            bes'4. bes8 c8 bes8 |
+                            f4. as8 g8 f8 |
+                            \alternative{
+                                \volta 1 {es4. es8 es8 bes8 |}
+                                \volta 2 {es4 es4 es4 |}
+                            }
+                        }
+                        \time 2/4
+                        f4 es4 |
+                        \time 4/4
+                        \repeat volta 2 {
+                            \OiLyLia
+                            \alternative{
+                                \volta 1 {\OiLyLiaVa}
+                                \volta 2 {<g es>4 r2 es8 bes8 |}
+                            }
+                        }
+                    }
+                }
+                \new Lyrics \lyricsto "main" {
+                    \set stanza = "1. "
+                    Ė -- jo
+                    \repeat volta 2 {
+                        se -- nis lau -- ko ar -- ti
+                        Pa -- si -- ė -- męs pyp -- kę
+                        \alternative{
+                            \volta 1 {kar -- čią. Ė -- jo}
+                            \volta 2 {kar -- čią. Oi}
+                        }
+                    }
+                    ly -- lia
+                    \repeat volta 2 {
+                        oi ly -- lia,
+                        \unfoldRepeats {\repeat volta 2 {
+                            Oi ly -- lia, oi -- ly -- lia,
+                        }}
+                        Dai -- nuok link --
+                        \alternative{
+                            \volta 1 {skmai! Oi ly -- lia,}
+                            \volta 2 {skmai! \set stanza = "2. " Ė -- jo}
+                        }
+                    }
+                }
+            >>
+            \new Staff <<
+                \key es \major
+                \time 4/4
+                \clef treble
+                \new Voice = "tumba" {
+                    \autoBeamOff
+                    \relative es' {
+                        \unfoldRepeats {\repeat volta 4 {es8 es8}} |
+                        \time 3/4
+                        \repeat volta 2 {
+                            \unfoldRepeats {\repeat volta 6 {es8 es8}} |
+                            \unfoldRepeats {\repeat volta 3 {bes8 bes8}} |
+                            \alternative{
+                                \volta 1 {\unfoldRepeats {\repeat volta 3 {es8 es8}} |}
+                                \volta 2 {es8 es8 es8 es8 es4 |}
+                            }
+                        }
+                        \time 2/4
+                        f4 es4 |
+                        \time 4/4
+                        \repeat volta 2 {
+                            \OiLyLia
+                            \alternative{
+                                \volta 1 {\OiLyLiaVa}
+                                \volta 2 {<g es>4 es8 es8 es8 es8 es8 es8 |}
+                            }
+                        }
+                    }
+                }
+                \new Lyrics \lyricsto "tumba" {
+                    Tum -- ba,
+                    \unfoldRepeats{\repeat volta 16 {tum -- ba,}}
+                    tum -- ba.
+                    \unfoldRepeats{\repeat volda 26 {\skip 1}}
+                    Tum -- ba,
+                    \unfoldRepeats{\repeat volta 2 {tum -- ba,}}
+                }
+            >>
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Man pypkelę atiduoki.}
+        \DainosPosmas{2}Ėjo boba tuo keleliu,\\*
+        Rado pypkę ant kelmelio.
+
+        \DainosPosmas{3}O tu boba, nekvailioki,\\*
+        Man pypkelę atiduoki.
+
+        \DainosPosmas{4}Buvo boba durnavota\\*
+        Ir nurovė pypkei kotą.
+
+        \DainosPosmas{5}Mano pypkė kukavinė,\\*
+        O cibukas misinginis.
+    \end{DainosZodziai}
+
+    Paprastai šitoje dainoje visi dainuoja "tumba, tumba", tik solistas dainuoja žodžius. Priedainį
+    ("oi lylia, oi lylia") dainuoja visi kartu. Bet galima daryti ir kitaip, todėl priedainis
+    dvibalsis ir solisto partijoje.
+
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
     \printindex
