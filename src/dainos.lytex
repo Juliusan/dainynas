@@ -2756,7 +2756,11 @@
                 }
             >>
             \new Lyrics \lyricsto "main" {
-                \set stanza = "1. "
+                \set stanza = \markup {
+                    \column { \vspace #.33 "1. "}
+                    \override #'(font-encoding . fetaBraces)
+                    \lookup "brace80"
+                }
                 Tūk -- stan -- tis žing -- sne -- lių
                 Lig ta -- vo na -- me -- lių.
                 Ka -- da aš nu -- jo -- siu
@@ -2894,9 +2898,348 @@
         O cibukas misinginis.
     \end{DainosZodziai}
 
-    Paprastai šitoje dainoje visi dainuoja "tumba, tumba", tik solistas dainuoja žodžius. Priedainį
-    ("oi lylia, oi lylia") dainuoja visi kartu. Bet galima daryti ir kitaip, todėl priedainis
+    Paprastai šitoje dainoje visi dainuoja ,,tumba, tumba``, tik solistas dainuoja žodžius. Priedainį
+    (,,oi lylia, oi lylia``) dainuoja visi kartu. Bet galima daryti ir kitaip, todėl priedainis
     dvibalsis ir solisto partijoje.
+
+
+    \DainosPavadinimas{Aš turėjau kuiną seną}
+
+    Ši daina yra panašaus plano ir melodijos, kaip ir prieš tai buvusi. Jos temą taip pat paprastai
+    dainuoja solistas.
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key f \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        r2. f8 c8 |
+                        \time 3/4
+                        \repeat volta 2 {
+                            f4. a8 g8 f8 |
+                            c'4. c8 d8 c8 |
+                            g4. bes8 a8 g8 |
+                            \alternative{
+                                \volta 1 {f4. f8 f8 c8 |}
+                                \volta 2 {\time 2/4 f4 f4 |}
+                            }
+                        }
+                        \time 4/4
+                        \xNotesOn
+                        c'8 f,8 r2. |
+                        c'8 f,8 f8 f8 r2 |
+                        \xNotesOff
+                        \repeat volta 2 {
+                            <a f>8 <c a>8 <a f>8 <c a>8 <a f>8 <c a>8 <c a>4 |
+                            <c a>8 <bes g>8 <bes g>8 <bes g>8 <bes g>8 <a f>8 <a f>4 |
+                        }
+                    }
+                }
+                \new Lyrics \lyricsto "main" {
+                    \set stanza = "1. "
+                    Aš tu --
+                    \repeat volta 2 {
+                        rė -- jau kui -- ną se -- ną,
+                        Žiū -- riu, be -- sti -- ja jau
+                        \alternative{
+                            \volta 1 {ste -- na. Aš tu}
+                            \volta 2 {ste -- na.}
+                        }
+                    }
+                    Ru -- kvei!
+                    Ru -- kvei -- vei -- vei!
+                    \repeat volta 2 {
+                        Ru -- kvei, ru -- kvei, ru -- kvei bum,
+                        Čir -- vir -- vir -- vir bum bum bum.
+                    }
+                }
+            >>
+            \new Staff <<
+                \key f \major
+                \time 4/4
+                \clef treble
+                \new Voice = "tumba" {
+                    \autoBeamOff
+                    \relative es' {
+                        \unfoldRepeats {\repeat volta 4 {f8 f8}} |
+                        \time 3/4
+                        \repeat volta 2 {
+                            \unfoldRepeats {\repeat volta 6 {f8 f8}} |
+                            \unfoldRepeats {\repeat volta 3 {c8 c8}} |
+                            \alternative{
+                                \volta 1 {\unfoldRepeats {\repeat volta 3 {f8 f8}} |}
+                                \volta 2 {\time 2/4 f8 f8 f8 f8 |}
+                            }
+                        }
+                        \time 4/4
+                        \xNotesOn
+                        r2 c'4 r4 |
+                        r2 c8 c8 c4 |
+                        \xNotesOff
+                    }
+                }
+                \new Lyrics \lyricsto "tumba" {
+                    Tum -- ba,
+                    \unfoldRepeats{\repeat volta 16 {tum -- ba,}}
+                    tum -- ba.
+                    Bum!
+                    Bum bum bum!
+                }
+            >>
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Žiūriu, bestija nusprogo.}
+        \DainosPosmas{2}Ėjau dalgio į pastogę,\\*
+        Žiūriu, bestija nusprogo.
+
+        \DainosPosmas{3}Kasiau duobę plačią gilią,\\*
+        Kad palaidočiau bestiją.
+
+        \DainosPosmas{4}O ta uodega kaip mietas\\*
+        Neužtenka duobėj vietos.
+    \end{DainosZodziai}
+
+    Šitą dainą aš girdėjau žemaitiškai, todėl ir reikėtų ją dainuoti žemaitiškai. Bet nei aš moku
+    taip kalbėti, nei aš moku taip rašyti, tai užrašiau lietuviškai. Susižemaičiuokite patys. Iš
+    to, ką aš darau: ,,o`` žodžio vidury tariasi ,,uo``: ,,pastuogę``, ,,nuspruogo``; ,,uo``
+    tariasi ,,ou``: ,,doubę``, ,,oudega``; ,,ie`` tariasi ,,ei``: ,,meitas``, ,,veitas``.
+
+    Jei yra noro is sveikatos, kai kurie balsai paskutiniame posme paskutinį taktą gali dainuoti
+    ir taip:
+
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key f \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        c'8 c8 d8 e8 f8 f8 f4 |
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Čir -- vir -- vir -- vir bum bum bum.
+            }
+        >>
+    \end{lilypond}
+
+
+    \DainosPavadinimas{Pirmyn, atgal, kairėn, dešinėn}
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 6/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 8 <a' fis>8 |
+                        <a fis>8 <fis d>8 <fis d>8 <fis d>8 <fis d>8 <a fis>8 |
+                        <a fis>8 <e a,>8 <e a,>8 <e a,>4 <fis d>8 |
+                        <g e>8 <g e>8 <a fis>8 <b g>8 <b g>8 <b g>8 |
+                        <a fis>8 <a fis>8 <g e>8 <fis d>4 <a fis>8 |
+                        \repeat volta 2 {
+                            <a fis>4 <fis d>8 <fis d>4 <a fis>8 |
+                            <a fis>4 <e a,>16 <e a,>16 <e a,>4 <fis d>8 |
+                            <g e>4 <a fis>8 <b g>4 <b g>8
+                            \alternative{
+                                \volta 1 {<a fis>8 <a fis>8 <g e>8 <fis d>4 <a fis>8 |}
+                                \volta 2 {<a fis>8 <a fis>8 <g e>8 <fis d>4}
+                            }
+                            \bar "|."
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Tu -- pė -- jo paukš -- te -- liai ant me -- džio ša -- kos,
+                Čiul -- bė -- jo ul -- bė -- jo, kaip mu -- du a -- bu.
+                Pir --
+                \repeat volta 2 {
+                    myn, at -- gal, kai -- rėn, de -- ši -- nėn,
+                    Aukš -- tyn, že -- myn, kaip
+                    \alternative{
+                        \volta 1 {mu -- du a -- bu. Pir}
+                        \volta 2 {mu -- du a -- bu.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+
+    Šią dainą itin tinka dainuoti prie stalo, nes tada patogiausia daryti tai, kas sakoma
+    žodžiuose: ,,pirmyn`` --- pasilenkti į priekį, ,,aukštyn`` --- truputį atsistoti. Paprastai
+    dainuojama susikabinus greta sėdintiesiems už parankių. O ką daryti, kai žodžiai judesių
+    neapibrėžia? Reikia tiesiog linguoti į kairę ir į dešinę. Taip pat susikabinus už parankių.
+
+    Beje --- dainoje tik vienas posmas, bet tai ne problema. Pradėti dainuoti reikia lėtai, o
+    kiekvieną kartą šį posmą kartojant tempą vis greitinti. Taip, priklausomai nuo kantrybės ir
+    dainuojančiųjų būklės, posmų gali gautis ir visai nemažai.
+
+
+    \DainosPavadinimas{Užėjau karčiamėlėn}
+
+    \begin{lilypond}
+        drumPitchNames.kranka   = #'bassdrum
+        drumPitchNames.dranka   = #'snare
+        drumPitchNames.ploti    = #'hihat
+        drumPitchNames.pliaukst = #'sidestick
+        \layout {
+            \context {
+                \DrumStaff
+                \RemoveAllEmptyStaves
+            }
+        }
+        \new ChoirStaff<<
+            \new Staff <<
+                \key f \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        \partial 4 a8. g16 |
+                        \repeat volta 2 {
+                            f4 c4 f4 |
+                            e8[( f8)] g4 bes8. a16 |
+                            \tieDashed
+                            g4 c,4 e8~ e8 |
+                            \tieSolid
+                            \alternative{
+                                \volta 1 {f2 a8. g16 |}
+                                \volta 2 {f2. |}
+                            }
+                        }\break
+                        c2.^"rit." | d2. | e2. |
+                        \repeat volta 2 {
+                            f8.^"a tempo" f16 f8 c'8 a8 f8 |
+                            e8. e16 e8 c'8 bes4 |
+                            e,8. e16 e8 c'8 bes8 e,8 |
+                            \alternative{
+                                \volta 1 {f8. f16 f8 c'8 a4 |}
+                                \volta 2 {f2}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+                \new Lyrics \lyricsto "main" {
+                    Už -- ė -- jau kar -- čia -- mė -- lėn
+                    Ža -- lio vy -- no iš -- gert. Už -- gir
+                    \skip 2. Oi ly -- lia.
+                    \repeat volta 2 {
+                        Oi ly -- lia, oi ly -- lia,
+                        Oi ly -- lia, ku -- kū.
+                        Oi ly -- lia, oi ly -- lia,
+                        \alternative{
+                            \volta 1 {Oi ly -- lia, ku -- kū.}
+                            \volta 2 {Oi.}
+                        }
+                    }
+                }
+                \new Lyrics \lyricsto "main" {
+                    \skip 1 \skip 1
+                    dau ge -- gu -- tė -- lę
+                    Už -- ku -- kuo -- jant \set ignoreMelismata = ##t vie -- ną \unset ignoreMelismata \skip 2 \skip 8. \skip 16 kart.
+                }
+            >>
+            \new DrumStaff \with { \override StaffSymbol.line-count = #4 } <<
+                \set DrumStaff.drumStyleTable = #(alist->hash-table '(
+                    (bassdrum  cross   #f  -3)
+                    (snare     cross   #f  -1)
+                    (hihat     cross   #f   1)
+                    (sidestick cross   #f   3)
+                ))
+                \new DrumVoice {\drummode {
+                    s4 \unfoldRepeats {\repeat volta 5 {s2.}}
+                    \unfoldRepeats {\repeat volta 9 {kranka8 dranka8}}
+                    \repeat volta 2{
+                        \unfoldRepeats {\repeat volta 3 {<kranka dranka>4 ploti4 pliaukst4}}
+                        \alternative{
+                            \volta 1 {<kranka dranka>4 ploti4 pliaukst4}
+                            \volta 2 { kranka8[ dranka8 kranka8 dranka8]}
+                        }
+                    }
+                }}
+            >>
+        >>
+    \end{lilypond}
+
+    Nuo šešto takto prasidedanti apatinė keturių eilučių penklinė --- perkusija. Grojama taip:
+    viršutinė eilutė --- abiem rankomis pliaukštelėti pirštais, antra nuo viršaus eilutė --- ploti,
+    trečia --- dešine ranka suduoti per dešinę šlaunį, apatinė --- kaire ranka per kairę šlaunį.
+    6 -- 8 ir 13 taktuose esančias aštuntines nebūtina daryti ritmiškai. Svarbu keičiant rankas
+    tankiai pliauškėti per šlaunis.
+
+    Toliau kartojant šią dainą reikia didinti gegutės kukavimų skaičių: vietoj ,,vieną`` dainuoti
+    ,,du``, ,,tris``, ,,penkis``, ,,dešimt`` ir taip toliau. Tačiau koks sudainuojamas skaičius,
+    tiek kartų reikia ir kukuoti visose ,,kukū`` vietose. Pavyzdžiui, dviejų kartų variantas:
+
+    \begin{lilypond}
+        drumPitchNames.kranka   = #'bassdrum
+        drumPitchNames.dranka   = #'snare
+        drumPitchNames.ploti    = #'hihat
+        drumPitchNames.pliaukst = #'sidestick
+        \layout {
+            #(layout-set-staff-size 14)
+        }
+        \new ChoirStaff<<
+            \new Staff <<
+                \key f \major
+                \time 3/4
+                \omit Staff.TimeSignature
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative f' {
+                        f8. f16 f8 c'8 a8 f8 |
+                        \time 4/4
+                        e8. e16 e8 c'8 bes8 c8 bes4 |
+                        \time 3/4
+                        e,8. e16 e8 c'8 bes8 e,8 |
+                        \time 4/4
+                        f8. f16 f8 c'8 a8 c8 a4 |
+                        \bar "|."
+                    }
+                }
+                \new Lyrics \lyricsto "main" {
+                    Oi ly -- lia, oi ly -- lia,
+                    Oi ly -- lia, ku -- kū, ku -- kū.
+                    Oi ly -- lia, oi ly -- lia,
+                    Oi ly -- lia, ku -- kū, ku -- kū.
+                }
+            >>
+            \new DrumStaff \with { \override StaffSymbol.line-count = #4 } <<
+                \omit Staff.TimeSignature
+                \set DrumStaff.drumStyleTable = #(alist->hash-table '(
+                    (bassdrum  cross   #f  -3)
+                    (snare     cross   #f  -1)
+                    (hihat     cross   #f   1)
+                    (sidestick cross   #f   3)
+                ))
+                \new DrumVoice {\drummode {
+                    <kranka dranka>4 ploti4 pliaukst4
+                    <kranka dranka>4 ploti4 pliaukst4 pliaukst4
+                    <kranka dranka>4 ploti4 pliaukst4
+                    <kranka dranka>4 ploti4 pliaukst4 pliaukst4
+                }}
+            >>
+        >>
+    \end{lilypond}
+
+    Žodžiu, galima tęsti, kol neatsibos. Tik, matyt, vienas kuris nors turėtų skaičiuoti, kad visi
+    nepasimestų.
+
 
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
