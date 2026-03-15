@@ -71,6 +71,8 @@
     laiko. Kol kas dar nežinau, ar jis kada nors bus visiškai pabaigtas.
     \cleardoublepage
 
+    % TODO: stengiausi vengti tarmybių, bet knygutėse jų pilna
+
     \chapter{Dainos}
 
 
@@ -192,7 +194,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Obelėlė}
+    \DainosPavadinimas{Obelėlė} % Ž06
     \begin{lilypond}
         <<
             \new Staff <<
@@ -232,9 +234,9 @@
         >>
     \end{lilypond}
     \begin{DainosZodziai}{3}{Raudonų, raudonų}
-        \DainosPosmas{2}Prigyk, prigyk, obelėle,\\*
+        \DainosPosmas{2}Prigiek, prigiek, obelėle,\\*
         Vėlyvai, vėlyvai.\\*
-        Nokink savo obuolėlius\\*
+        Nokiek savo obuolėlius\\*
         Raudonai, raudonai.
 
         \DainosPosmas{3}Aš priskinsiu obuolėlių\\*
@@ -247,6 +249,12 @@
         Kad šių naktį jaunimėly\\*
         Nebuvai, nebuvai?
     \end{DainosZodziai}
+
+    Knygelėje antrojo posmo antroji eilutė yra ,,Žalumai, žalumai``, o trečioji
+    --- ,,Nokiek, nokiek obuolėlius``. Trečiojo posmo pirmosios dvi eilutės yra
+    ,,Skinsiu, skinsiu obuolėlius \textbackslash\textbackslash\ Raudonus,
+    raudonus``, trečioji --- ,,Ir nunešiu mergužėlei``. Ketvirtojo posmo pirmas
+    žodis yra ,,Širdužėla``.
 
 
     \DainosPavadinimas{Kad aš jojau}
@@ -1183,7 +1191,8 @@
     \end{lilypond}
 
 
-    \DainosPavadinimas{Oi, ant kalno, ant aukštojo}
+    \DainosPavadinimas{Oi, ant kalno, ant aukštojo} % Ž01
+    %http://dainutekstai.lt/r1122697/kitava-oi-ant-kalno-ant-aukstojo.html
     \begin{lilypond}
         <<
             \new Staff <<
@@ -1205,56 +1214,63 @@
                 \set stanza = "1. "
                 Oi, ant kal -- no, ant auk -- što -- jo
                 Sto -- vi bal -- ta ka -- rū -- nė -- lė.
-                O -- jo -- joi, sto -- vi bal -- ta ka -- rū -- nė -- lė.
+                Oi, oi, oi, sto -- vi bal -- ta ka -- rū -- nė -- lė.
             }
         >>
     \end{lilypond}
     \begin{DainosZodziai}{2}{Vai ką tu ten pasiklosi?}
-        \DainosPosmas{2}Toje baltoj karūnėlėj\\*
+        \DainosPosmas{2}Po toj balta karūnėlė\\*
         Guli pilkas akmenėlis.\\*
-        Ojojoi, guli pilkas akmenėlis.
+        Oi, oi, oi, guli pilkas akmenėlis.
 
         \DainosPosmas{3}Ant to pilko akmenėlio\\*
         Sėdi tėvas, motinėlė.\\*
-        Ojojoi, sėdi tėvas, motinėlė.
+        Oi, oi, oi, sėdi tėvas, motinėlė.
 
-        \DainosPosmas{4}Sėdėdami gailiai verkia, ---\\*
-        Sav' sūnelį karan rengia.\\*
-        Ojojoi, sav' sūnelį karan rengia.
+        \DainosPosmas{4}Sėdėdami gailiai verkė, ---\\*
+        Kad sūnelį karan rengė.\\*
+        Oi, oi, oi, kad sūnelį karan rengė.
 
-        \DainosPosmas{5}Vai sūneli, raitužėli,\\*
-        Vai ką tu ten pasiklosi?\\*
-        Ojojoi, vai ką tu ten pasiklosi?
+        \DainosPosmas{5}Oi sūneli, oi raiteli,\\*
+        Oi kuo tu ty pasiklosi?\\*
+        Oi, oi, oi, oi kuo tu ty pasiklosi?
 
-        \DainosPosmas{6}Vai ką tu ten pasiklosi,\\*
-        Vai kuo tu ten užsiklosi?\\*
-        Ojojoi, vai kuo tu ten užsiklosi?
+        \DainosPosmas{6}Oi kuo tu ty pasiklosi,\\*
+        Oi kuo tu ty užsiklosi?\\*
+        Oi, oi, oi, oi kuo tu ty užsiklosi?
 
-        \DainosPosmas{7}Gailių rasų pasiklosiu,\\*
-        O miglele užsiklosiu.\\*
-        Ojojoi, o miglele užsiklosiu.
+        \DainosPosmas{7}Pasiklosiu gailiu rasu,\\*
+        O miglely užsiklosiu.\\*
+        Oi, oi, oi, o miglely užsiklosiu.
 
-        \DainosPosmas{8}Vai sūneli, raitužėli,\\*
+        \DainosPosmas{8}Oi sūneli, oi raiteli,\\*
         Tu nujoki Vilniaus miestan.\\*
-        Ojojoi, tu nujoki Vilniaus miestan.
+        Oi, oi, oi, tu nujoki Vilniaus miestan.
 
         \DainosPosmas{9}Tu nujoki Vilniaus miestan,\\*
-        Nusipirki tris triūbeles.\\*
-        Ojojoi, nusipirki tris triūbeles.
+        Ir nus'pirkie tris triūbelas.\\*
+        Oi, oi, oi, ir nus'pirkie tris triūbelas.
 
-        \DainosPosmas{10}Pirma triūba užtriūbysi,\\*
-        Tėvą, močią pravirkdysi.\\*
-        Ojojoi, tėvą, močią pravirkdysi.
+        \DainosPosmas{10}Pirmu triūbu užtriūbysi,\\*
+        Tėvų, mamų pravirkdysi.\\*
+        Oi, oi, oi, tėvų, mamų pravirkdysi.
 
-        \DainosPosmas{11}Antra triūba užtriūbysi,\\*
-        Vilniaus miestą pabudysi.\\*
-        Ojojoi, Vilniaus miestą pabudysi.
+        \DainosPosmas{11}Antru triūbu užtriūbysi,\\*
+        Vilniaus miestų pabudysi.\\*
+        Oi, oi, oi, Vilniaus miestų pabudysi.
 
-        \DainosPosmas{12}Trečia triūba užtriūbysi,\\*
-        Visą svietą sujudysi.\\*
-        Ojojoi, visą svietą sujudysi.
+        \DainosPosmas{12}Traciu triūbu užtriūbysi,\\*
+        Visų svietų sujudysi.\\*
+        Oi, oi, oi, visų svietų sujudysi.
     \end{DainosZodziai}
 
+    Knygelėje pirmiau buvo visas svietas, po to Vilniaus miestas. Bet man
+    atrodo, kad logiškiau, kai pirma pabunda Vilnius, o tik tada pasaulis. Taip
+    pat knygelėje visas svietas pravirkdomas, o Vilniaus miestas sujudinamas.
+    Palikau įvairesnius žodžius rastus internete. Be to atrodo, kad
+    knygelėje buvo bandoma rašyti dzūkiškai. Tokiu atveju, turėtų būti
+    ,,pravirkdzysi``, ,,sujudzysi``, bet knygelėje to nėra, tai to ir
+    nepridėjau.
 
     \DainosPavadinimas{Ant kalno klevelis}
     \begin{lilypond}
@@ -1373,7 +1389,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Tykus vakars be vėjo}
+    \DainosPavadinimas{Tykus vakars be vėjo} % Ž02
     \begin{lilypond}
         <<
             \new Staff <<
@@ -1415,7 +1431,7 @@
         Ar nematei žirgelio, žirgelio?
 
         \DainosPosmas{5}Matyt mačiau žirgelį, žirgelį,\\*
-        Savo tėvo dvarelį, dvarelį.
+        Savo tėvo dvarely, dvarely.
     \end{DainosZodziai}
 
 
@@ -1658,7 +1674,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Leiskit į Tėvynę}
+    \DainosPavadinimas{Leiskit į Tėvynę} % Ž10
 
     \begin{lilypond}
         <<
@@ -1689,16 +1705,31 @@
             }
         >>
     \end{lilypond}
-    \begin{DainosZodziai}{2}{Ten mano dainelė}
+    \begin{DainosZodziai}{3}{Ten mano dainelė}
         \DainosPosmas{2}Pirm negu aušrelė\\*
         Skaisti užtekės,\\*
         Ten mano dainelė\\*
-        Linksmai nuskambės.
+        Linksmai suskambės.
 
-        \DainosPosmas{3}Svetima padangė\\*
+        \DainosPosmas{3}Kai medžių ūžimas\\*
+        Giedančiam pritars,\\*
+        Šventas įkvėpimas\\*
+        Dainą man sutvers.
+
+        \DainosPosmas{4}Čia jausmai man žūva,\\*
+        Kalinė širdis.\\*
+        Leiskit į Lietuvą,\\*
+        Akys ten nušvis.
+
+        \DainosPosmas{5}Svetima padangė\\*
         Nemaloni, ne!\\*
         Tėviškėlę brangią\\*
         Vis regiu sapne.
+
+        \DainosPosmas{6}Nemuną dabina\\*
+        Puikesni žiedai,\\*
+        Širdį ten ramina\\*
+        Meilesni jausmai.
     \end{DainosZodziai}
 
 
@@ -2035,7 +2066,7 @@
     ir kurie man atrodo logiškiausi.
 
 
-    \DainosPavadinimas{Oi, ko nusižvengei}
+    \DainosPavadinimas{Oi, ko nusižvengei} % Ž05
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -2092,6 +2123,10 @@
         Tėvą ir močiutę,\\*
         Brolį ir sesutę.
     \end{DainosZodziai}
+
+    Knygelėje trečiojo posmelio antroji eilutė yra tokia ,,Šaunus vyras
+    būsiu``. Bet užrašytas variantas geriau rimuojasi. Taip pat knygelėje
+    nėra paskutinio posmo.
 
 
     \DainosPavadinimas{Į Vilnių, į Vilnių}
@@ -2478,7 +2513,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Neliūdėk, motule, kad prie Kūčių stalo}
+    \DainosPavadinimas{Neliūdėk, motule, kad prie Kūčių stalo} % Ž09
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -2509,29 +2544,43 @@
             \new Lyrics \lyricsto "main" {
                 \set stanza = "1. "
                 Ne -- liū -- dėk, mo -- tu -- le, kad prie Kū -- čių sta -- lo
-                Šį -- met vie -- na vie -- ta pa -- si -- liks tuš -- čia.
+                Kar -- tais vie -- na vie -- ta pa -- si -- liks tuš -- čia.
                 \repeat volta 2 {
-                    Kad ne -- lauš iš ran -- kos tau bal -- tos plot -- ke -- lės
+                    Ir ne -- lauš iš ran -- kos tau bal -- tos plot -- ke -- lės
                     Tas, kur per -- nai lau -- žė
                     \alternative{
-                        \volta 1 {ir dar bu -- vo čia.}
-                        \volta 1 {ir dar bu -- vo čia.}
+                        \volta 1 {ir sė -- dė -- jo čia.}
+                        \volta 1 {ir sė -- dė -- jo čia.}
                     }
                 }
             }
         >>
     \end{lilypond}
     \begin{DainosZodziai}{2}{Prie apkrauto stalo su visa šeima.}
-        \DainosPosmas{2}Aš žinau, tu sėsi, poterius kalbėsi\\*
+        \DainosPosmas{2}Šiemet mano vietoj padėk eglės šaką\\*
+        Iš to pat eglyno, kuriame buvau.\\*
+        Ir uždek, mamyte, Kūčių stalo žvakę.\\*
+        Tu tai padarysi, aš tikrai žinau.
+
+        \DainosPosmas{3}Aš žinau, tu sėsi, poterius kalbėsi\\*
         Prie apkrauto stalo su visa šeima.\\*
         Mane prisiminus gailiai tu raudosi,\\*
         Ašarą nubrauksi šilko skarele.
 
-        \DainosPosmas{3}Neliūdėk, motule, šičia aš ne vienas\\*
+        \DainosPosmas{4}Vai neliūsk, motule, šičia aš ne vienas\\*
         Toli nuo Tėvynės, nuo gimtų namų.\\*
         Daugelis nevalgo Kūčių vakarienės,\\*
         Daugelis dar ilgisi gimtų namų.
+
+        \DainosPosmas{5}Vai nepyk, motule, kad keliai vingiuoti,\\*
+        Kad skrendu it paukštis iš gimtų namų.\\*
+        Grįšiu aš, mamyte, iš kelių toliausių,\\*
+        Jeigu žiburėlis grįžtant neužges.
     \end{DainosZodziai}
+
+    Knygelėje prirašytas nepilnas posmas, kurio aš nesugebu pabaigti: ,,Vargus
+    iškentėjęs pas tave sugrįšiu \textbackslash\textbackslash\ Ir plotkelę
+    laušiu aš iš tavo rankų \textbackslash\textbackslash\ Namuose nesėsiu``.
 
 
     \DainosPavadinimas{Jei ne auksinės vasaros}
@@ -3249,6 +3298,208 @@
 
     Žodžiu, galima tęsti, kol neatsibos. Tik, matyt, vienas kuris nors turėtų skaičiuoti, kad visi
     nepasimestų.
+
+
+    \DainosPavadinimas{Oi žiba žiburėlis} % Ž03
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \minor
+                \time 9/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        f8 e8 d8 a'4 g8 d4 e8 |
+                        f8 e8 d8 a'4 g8 d4 d8 |
+                        \repeat volta 2 {
+                            \time 6/8
+                            a'4 g16([ bes16]) a4 g8 |
+                            f8 e8 f8 g4 e8 |
+                            \time 9/8
+                            \alternative{
+                                \volta 1 {g8 g8 g8 a4 g8 d4 e8 |}
+                                \volta 2 {g8 g8 g8 a4 g8 d4~ d8 |}
+                            }
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Oi ži -- ba ži -- bu -- rė -- lis
+                Kaip auk -- so lik -- to -- rė -- lis.
+                \repeat volta 2 {
+                    Ten sto -- vė -- jo se -- na mo -- tu -- lė
+                    \alternative {
+                        \volta 1 {Ant dar -- že -- lio iš -- ė -- jus.}
+                        \volta 2 {Ant dar -- že -- lio \set ignoreMelismata = ##t iš -- ė -- (jus). \unset ignoreMelismata}
+                    }
+               }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Ne su visam, motule,}
+        \DainosPosmas{2}Ant dvarelio išėjus,\\*
+        Vartelius atsikėlus,\\*
+        Klausinėjo pas dukružėlę\\*
+        Ar su visam parėjus.
+
+        \DainosPosmas{3}Ne su visam, motule,\\*
+        Ne su visam, širdele.\\*
+        Aš parėjau pas motinėlę\\*
+        Rūtelių vainikėlio.
+
+        \DainosPosmas{4}Oi sakal' sakalėli,\\*
+        Tu raibas paukštužėli,\\*
+        Tu lakiojai po žalių girių\\*
+        Atnešk man vainikėlį.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Anoj pusėj Dunojėlio} % Ž04
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 d8 <e a,>8 |
+                        <fis d>4. <e a,>8 d8 <e a,>8 |
+                        <fis d>4. d8 <fis d>8 <fis d>8 |
+                        \time 2/4
+                        <fis d>8 <e a,>8 <fis d>8([ <g e>8]) |
+                        \time 3/4
+                        <a fis>2 <b g>8 <a fis>8 |
+                        \repeat volta 2 {
+                            <a e>4. <g e>8 <fis d>8 <a fis>8 |
+                            <e a,>4. d8 d8 <e a,>8 |
+                            \alternative{
+                                \volta 1 {
+                                    \time 2/4
+                                    <fis d>8 <e a,>8 <fis d>8([ <g e>8]) |
+                                    \time 3/4
+                                    <a fis>2 <b g>8 <a fis>8 |
+                                }
+                                \volta 2 {
+                                    \time 2/4
+                                    <fis d>8 <e a,>8 d4~ |
+                                    \time 3/4
+                                    d4~ d4
+                                }
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                A -- noj pu -- sėj Du -- no -- jė -- lio
+                Pie -- ve -- lė ža -- lia -- vo,
+                Grė -- bė
+                \repeat volta 2 {
+                    pul -- kas mer -- gu -- žė -- lių,
+                    Grėb -- da --
+                    \alternative {
+                        \volta 1 {mos dai -- na -- vo. Grė -- bė}
+                        \volta 2 {mos dai -- \set ignoreMelismata = ##t na -- _ (vo). \unset ignoreMelismata}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Tų graudžių dainelių,}
+        \DainosPosmas{2}Nedainuokit mergužėlės\\*
+        Tų graudžių dainelių,\\*
+        Negraudinkit man širdelės\\*
+        Jaunam kareivėliui.
+
+        \DainosPosmas{3}Aš išjojau į karužę,\\*
+        Laimės nežiūrėjau\\*
+        Ir sutikau pirmą kulką.\\*
+        Širdelę pervėrė.
+
+        \DainosPosmas{4}Guli, guli kareivėlis\\*
+        Ant karo pašautas,\\*
+        Stovi juodbėris žirgelis\\*
+        Kamanom pamautas.
+
+        \DainosPosmas{5}Eik žirgeli, juodbėrėli,\\*
+        Ką aš tau sakysiu:\\*
+        Aš ant tavo kamanėlių\\*
+        Gromatą rašysiu.
+
+        \DainosPosmas{6}Parašysiu aš laiškelį\\*
+        Aukselio raidelėm\\*
+        Ir uždėsiu antspaudėlį\\*
+        Rūtų vainikėliu.
+    \end{DainosZodziai}
+
+    Žodis ,,aukselio`` knygelėje buvo praleistas. Suradau kituose giesmynuose
+    ,,Aukso litarėlėm``, ,,Aukso raidužėlėms``, tai beliko žodį ,,auksas``
+    priderinti prie ,,raidelėm``.
+
+
+    \DainosPavadinimas{Žaliam berže gegutė kukavo} % Ž08
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 2/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 d8 fis8 |
+                        <a fis>4 <fis d>8 <e a,>8 | <a fis>4 <a fis>8 <a fis>8 |
+                        <b g>8 <b g>8 <a fis>8 <a fis>8 | <fis d>8([ <a fis>16 <fis d>16]) <e a,>8 d8 |
+                        <a' fis>4 <a e>8 <a e>8 | <fis d>2~ | <fis d>4
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Ža -- liam ber -- že ge -- gu -- tė ku -- ka -- vo,
+                Ža -- liam ber -- že ge -- gu -- tė \set ignoreMelismata = ##t ku -- ka -- (vo).\unset ignoreMelismata
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{3}{Kaip rūta žydėsi.}
+        \DainosPosmas{2}Kai man' mažą\\*
+        Motulė liūliavo.
+
+        \DainosPosmas{3}Čiūčia liūlia,\\*
+        Mažyte dukrele.
+
+        \DainosPosmas{4}Užliūliavo\\*
+        Ant baltų rankelių.
+
+        \DainosPosmas{5}Ir paleido\\*
+        Ant didžių vargelių.
+
+        \DainosPosmas{6}Kokiam teksi\\*
+        Tu šelmiui berneliui?
+
+        \DainosPosmas{7}Jei už gero\\*
+        Kaip rūta žydėsi.
+
+        \DainosPosmas{8}Jei už blogo\\*
+        Kaip mėta nuvysi.
+    \end{DainosZodziai}
+
+    Šita daina ir knygelėje yra taisyta. Pirmame posme buvo parašyta
+    ,,Aukštam``, taisyta į ,,Žaliam``. Antrame posme -- ,,Močiutė`` taisyta į
+    ,,Motulė``. Septintame posme ,,Jeigu geram`` taisyta į ,,Jei už gero``.
+    Tiesa, aštuntame posme ,,Jeigu blogam`` netaisyta. Be to, penktojo posmo
+    antra eilutė knygelėje yra ,,Tu teksi berneliui``.
 
 
     \cleardoublepage
