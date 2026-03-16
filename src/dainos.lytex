@@ -2459,7 +2459,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Stoviu aš parimus}
+    \DainosPavadinimas{Aš verkiau parimus} % Ž13
     %https://ve.lt/gyvenimas/kultura/neklauskit-dainiaus-vardo-arba-as-verkiau-parimus
 
     \begin{lilypond}
@@ -2486,27 +2486,27 @@
             >>
             \new Lyrics \lyricsto "main" {
                 \set stanza = "1. "
-                Sto -- viu aš pa -- ri -- mus prie rū -- tų dar -- že -- lio,
-                Kai pas -- pau -- dus ran -- ką ty -- liai iš -- ė -- jai.
+                Aš ver -- kiau pa -- ri -- mus tarp rū -- tų dar -- že -- lio,
+                Kai pas -- pau -- dęs ran -- ką ty -- liai iš -- ė -- jai.
                 \repeat volta 2 {
                     A -- ša -- rom si -- dab -- ro ver -- kė rū -- tos ža -- lios,
-                    Ver -- kė ū -- ka -- no -- se pas -- ken -- dę miškai.
+                    Ver -- kė ū -- ka -- no -- se skęs -- da -- mi miš -- kai.
                 }
             }
         >>
     \end{lilypond}
     \begin{DainosZodziai}{1}{Kas akis manąsias atras lino žiede}
-        \DainosPosmas{2}Kas paklaus, kodėl gi ašaros taip byra?\\*
+        \DainosPosmas{2}Kas paklaus, ko verki, ašaros kam srūva?\\*
         Kas man ravint rūtas ,,padėk Diev'`` sakys?\\*
         Kas akis manąsias atras lino žiede?\\*
-        Kas, o kas, o kas gi mane nuramins?
+        Pasakyk, oi kas gi mane nuramins?
 
-        \DainosPosmas{3}Lengvai mėto šeivą staklės ąžuolinės,\\*
-        Tiesias plonos gijos taip margai, margai.\\*
+        \DainosPosmas{3}Staklės lengvai mėto šeivas ąžuolines,\\*
+        Plonos gijos tiesias taip baltai, baltai.\\*
         Rankšluostin įausiu ,,Lietuva, Tėvyne,\\*
         Tu didvyrių žemė, mes Tavo vaikai``.
 
-        \DainosPosmas{4}O kada žemelė bus nuo kraujo soti\\*
+        \DainosPosmas{4}Kada mūs žemelė bus nuo kraujo soti\\*
         Ir kada sugrįši tu su žirgeliu.\\*
         Atnešiu vandens tau moliniam ąsoty,\\*
         Duosiu nusišluostyt rankšluosčiu nauju.
@@ -3436,14 +3436,14 @@
         Gromatą rašysiu.
 
         \DainosPosmas{6}Parašysiu aš laiškelį\\*
-        Aukselio raidelėm\\*
+        Auksinėm raidelėm\\*
         Ir uždėsiu antspaudėlį\\*
         Rūtų vainikėliu.
     \end{DainosZodziai}
 
-    Žodis ,,aukselio`` knygelėje buvo praleistas. Suradau kituose giesmynuose
+    Žodis ,,auksinėm`` knygelėje buvo praleistas. Suradau kituose giesmynuose
     ,,Aukso litarėlėm``, ,,Aukso raidužėlėms``, tai beliko žodį ,,auksas``
-    priderinti prie ,,raidelėm``.
+    priderinti prie ,,raidelėm``, o priderinti padėjo tėtis.
 
 
     \DainosPavadinimas{Žaliam berže gegutė kukavo} % Ž08
@@ -3500,6 +3500,99 @@
     ,,Motulė``. Septintame posme ,,Jeigu geram`` taisyta į ,,Jei už gero``.
     Tiesa, aštuntame posme ,,Jeigu blogam`` netaisyta. Be to, penktojo posmo
     antra eilutė knygelėje yra ,,Tu teksi berneliui``.
+
+
+    \DainosPavadinimas{Tėviškės laukuos saulutė leidos jau} % Ž11
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 9/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        e4 d8 c4 b8 c4 b8 |
+                        \time 12/8
+                        c4 e8 a4 g8 d2. |
+                        \time 9/8
+                        d4 e8 f4 e8 f4 e8 |
+                        \time 12/8
+                        f4 g8 b4 a8 e2. |
+                        \repeat volta 2 {
+                            e4 g8 c4 b8 d4. c4. |
+                            b4 a8 c4 c8 b2. |
+                            a4 g8 b4 a8 a4. g4. |
+                            \alternative {
+                                \volta 1 {d4 e8 f4 g8 e2. |}
+                                \volta 2 {d4 e8 f4 e8 c2. |}
+                            }
+                        }
+                        \bar "|."
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Tė -- viš -- kės lau -- kuos sau -- lu -- tė lei -- džias jau.
+                Va -- ka -- ro še -- šė -- liuos ta -- vęs ne -- ra -- dau.
+                \repeat volta 2 {
+                    Ir gal -- būt ne -- ra -- siu nie -- kad nie -- ka -- da,
+                    Tik švel -- nus vė -- je -- lis
+                    \alternative {
+                        \volta 1 {man pri -- mins ta -- ve. |}
+                        \volta 2 {man pri -- mins ta -- ve. |}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Tu šypsais rami ir nieko negirdi.}
+        \DainosPosmas{2}Motule tu mano, motule sena,\\*
+        Nerymok prie vartų, ašarų gana.\\*
+        Gal praeis pro šalį dar metelių daug,\\*
+        Aš tikrai sugrįšiu, tu tikėk ir lauk.
+
+        \DainosPosmas{3}Kapas, kelias, kryžius, viskas taip arti.\\*
+        Tu šypsais rami ir nieko negirdi.\\*
+        Gera tau miegoti sapne angelų,\\*
+        Nieko nežinoti, kad čia taip klaiku.
+
+        \DainosPosmas{4}O jeigu bu skirta man tokia dalis ---\\*
+        Sibiras, Uralas, tolima šalis,\\*
+        Takeliu sugrįšiu laistytu krauju,\\*
+        Nes tave, Tėvyne, taip karštai myliu.
+
+        \DainosPosmas{5}Rauda rudens vėjas, blaškos už langų.\\*
+        Man krūtinėj liūdna, širdžiai neramu.\\*
+        Lyg sapne vaidenas Nemuno krantai,\\*
+        Lygios plačios vagos ir gimti namai.
+    \end{DainosZodziai}
+
+    Knygelėje pirma eilutė užrašyta taip: ,,Tėviškės laukuos rasotuos saulė
+    leidos jau``. Bet tokiu atveju pirmajame takte reikia papildomų trijų
+    aštuntinių:
+
+    \begin{lilypond}
+        <<
+            \new Staff <<
+                \key c \major
+                \time 12/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        e4 d8 c4 b8 c4 b8 c4 b8 |
+                        c4 e8 a4 g8 d2. |
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Tė -- viš -- kės lau -- kuos ra -- so -- tuos sau -- lė lei -- dos jau.
+            }
+        >>
+    \end{lilypond}
 
 
     \cleardoublepage
