@@ -1326,7 +1326,7 @@
     \end{lilypond}
 
 
-    \DainosPavadinimas{Žvaigždėtą naktį ant pečių}
+    \DainosPavadinimas{Žvaigždėtą naktį ant pečių} % Ž18
     \begin{lilypond}
         <<
             \new Staff <<
@@ -1368,12 +1368,12 @@
     \end{lilypond}
     \begin{DainosZodziai}{2}{Kolei turėjai šovinių,}
         \DainosPosmas{2}Tik išdavikė drebulė\\*
-        Nežemiškai šlamėjo.\\*
+        Paslaptingai šlamėjo.\\*
         Tu sužavėtas užsnūdai,\\*
         O priešas pastebėjo.
 
-        \DainosPosmas{3}Buvai nuo budelių toli\\*
-        Negrįžti tu galėjai.\\*
+        \DainosPosmas{3}Buvai nuo budelio toli\\*
+        Sugrįžti negalėjai.\\*
         Tiktai širdis nerimo vis ---\\*
         Tėvynę tu mylėjai.
 
@@ -1387,6 +1387,10 @@
         Sesės tau kapą apkaišys,\\*
         Prisės tau daugel rūtų.
     \end{DainosZodziai}
+
+    Palikau knygelėje esančią versiją. Man jį įprastesnė. Tačiau internete radau trečiojo posmo
+    versiją, kurioje antra eilutė yra ,,Negrįžti tu galėjai``. Turint omeny, kad daina rašyta,
+    tikėtina, apie Adolfą Ramanauską-Vanagą, tokia versija atrodo logiškesnė.
 
 
     \DainosPavadinimas{Tykus vakars be vėjo} % Ž02
@@ -2280,7 +2284,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Palinko liepa šalia kelio}
+    \DainosPavadinimas{Palinko liepa šalia kelio} % Ž14
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -2324,10 +2328,10 @@
         >>
     \end{lilypond}
     \begin{DainosZodziai}{2}{Nuo priešo budelio rankos.}
-        \DainosPosmas{2}O jeigu teks man iškeliauti\\*
-        Iš šios žemelės mylimos,\\*
-        Mergaite, tu manęs neliūdėki,\\*
-        Aš vėl sugrįšiu pas tave.
+        \DainosPosmas{2}Jau greitai, greitai aš išeisiu\\*
+        Iš šios žemelės mylimos.\\*
+        Mergaite, manęs tu neliūdėki,\\*
+        Aš greit sugrįšiu pas tave.
 
         \DainosPosmas{3}O jeigu žūsiu už Tėvynę,\\*
         Nuo priešo budelio rankos.\\*
@@ -2335,9 +2339,14 @@
         ,,Myliu Tėvynę ir tave``.
 
         \DainosPosmas{4}Laukais pavasaris jau eina,\\*
-        Lakštutė čiulba vakarais.\\*
+        Lakštutė suokia vakarais.\\*
         Mergaite, papuošk kareivio kapą\\*
-        Baltais akacijų žiedais.
+        Baltais akacijos žiedais.
+
+        \DainosPosmas{5}Močiute, leisk man prisiskinti\\*
+        Baltų akacijos žiedų.\\*
+        Papuošiu aš mylimojo kapą,\\*
+        Kad jam ilsėtis būt' ramu.
     \end{DainosZodziai}
 
 
@@ -2583,7 +2592,7 @@
     laušiu aš iš tavo rankų \textbackslash\textbackslash\ Namuose nesėsiu``.
 
 
-    \DainosPavadinimas{Jei ne auksinės vasaros}
+    \DainosPavadinimas{Jei ne auksinės vasaros} % Ž16 Ž17
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -2624,17 +2633,79 @@
             }
         >>
     \end{lilypond}
-    \begin{DainosZodziai}{2}{Tas pievas, kur žaliavo.}
-        \DainosPosmas{2}Kur tas dulkėtas traukinys\\*
+    \begin{DainosZodziai}{3}{Tas pievas, kur žaliavo.}
+        \DainosPosmas{2}Išeisiu vieškeliais plačiais,\\*
+        Išeisiu ir negrįšiu.\\*
+        Žydės vosilkos mėlynai,\\*
+        Tik aš jų nematysiu.
+
+        \DainosPosmas{3}Tu palydėk, mamut', mane\\*
+        Nors ligi kiemo vartų.\\*
+        Ir pabučiuoki tu mane\\*
+        Kaip paskutinį kartą.
+
+        \DainosPosmas{4}Tu palydėk, mamut', mane\\*
+        Ligi vagono durų.\\*
+        Ir pabučiuoki tu mane\\*
+        Kaipo Tėvynės sūnų.
+
+        \DainosPosmas{5}Kur tas dulkėtas traukinys\\*
         Taip toli nuvažiavo?\\*
         Prisimenu, mamyte, aš\\*
         Tas pievas, kur žaliavo.
 
-        \DainosPosmas{3}Išeisiu vieną vakarą,\\*
-        Išeisiu ir negrįšiu.\\*
-        Žydės vosilkos pakely,\\*
-        Bet tu jų nematysi.
+        \DainosPosmas{6}Negaila tėtės nei mamos,\\*
+        Nei visko, ką turėjau.\\*
+        Tik gaila, gaila Lietuvos,\\*
+        Kurią karštai mylėjau.
     \end{DainosZodziai}
+
+    Knygelėje yra du šios dainos variantai. Jie panašūs, bet kartu ir skirtingi. Beje, ir pirmasis
+    variantas knygelėje prasideda ,,Kad ne auksinė vasara``. Palikau, kaip buvau užrašęs, dėl
+    įvairovės. Antrojo varianto žodžiai:
+
+    \begin{DainosZodziai}{3}{Ir kad neliks mums vietos čia}
+        \DainosPosmas{1}Kad ne auksinė vasara,\\*
+        Ne mėlynos vosilkos,\\*
+        Nebūtume atėję čia,\\*
+        Kur slenka dienos pilkos.
+
+        \DainosPosmas{2}Ir tas dulkėtas traukinys\\*
+        Taip toli nuvažiavo.\\*
+        Prisimenu, mamyte, aš\\*
+        Tas pievas, kur žaliavo.
+
+        \DainosPosmas{3}Prisimenu gimtinę aš,\\*
+        Jos mėlyną padangę.\\*
+        Ar besugrįšime kada\\*
+        Į Tėviškėlę brangią?
+
+        \DainosPosmas{4}Ir vėl bus vasara graži,\\*
+        Žydės vėl skaisčios gėlės.\\*
+        Nušluostyk ašaras gailias\\*
+        Jaunystę palydėjęs.
+
+        \DainosPosmas{5}Negaila tėtės nei mamos,\\*
+        Nei visko, ką turėjau.\\*
+        Tik gaila, gaila Lietuvos,\\*
+        Kurią karštai mylėjau.
+
+        \DainosPosmas{6}Šalie gimtoji, Lietuva,\\*
+        Kas tavęs nemylėjo?\\*
+        Ir kad neliks mums vietos čia\\*
+        Mes niekad netikėjom.
+
+        \DainosPosmas{7}O kad sustotų traukinys\\*
+        Lietuviškoj žemelėj,\\*
+        Aš parašyčiau laiškelį\\*
+        Savo mielai mergelei.
+
+        \DainosPosmas{8}Bet nesustojo traukinys\\*
+        Lietuviškoj žemelėj\\*
+        Ir neparašiau laiškelio\\*
+        Savo mielai mergelei.
+    \end{DainosZodziai}
+
 
 
     \DainosPavadinimas{Gražių dainelių daug girdėjau}
@@ -3559,7 +3630,7 @@
         Gera tau miegoti sapne angelų,\\*
         Nieko nežinoti, kad čia taip klaiku.
 
-        \DainosPosmas{4}O jeigu bu skirta man tokia dalis ---\\*
+        \DainosPosmas{4}O jeigu bus skirta man tokia dalis ---\\*
         Sibiras, Uralas, tolima šalis,\\*
         Takeliu sugrįšiu laistytu krauju,\\*
         Nes tave, Tėvyne, taip karštai myliu.
@@ -3593,6 +3664,120 @@
             }
         >>
     \end{lilypond}
+
+
+    \DainosPavadinimas{Skruostu nuriedėjo ašara viena} % Ž12
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \repeat volta 2 {
+                            <fis d>8. <fis d>16 <fis d>8. <e a,>16 <a fis>4. <g e>8 |
+                            <fis d>8. <e a,>16 <a fis>8. <g e>16 <fis d>2 |
+                        }
+                        \repeat volta 2 {
+                            <g e>8. <g e>16 <g e>8. <a fis>16 <b g>4. <b g>8 |
+                            <a fis>8. <a fis>16 <b g>8. <b g>16 <a fis>2 |
+                            <fis d>8. <e a,>16 <a fis>8. <a fis>16 <a fis>4. <e a,>8 |
+                            <a fis>8. <g e>16 <fis d>16([ <e cis>16]) <g e>8 <fis d>2 |
+                        }
+                    }
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = \markup {
+                    \column { \vspace #.33 "1. "}
+                    \override #'(font-encoding . fetaBraces)
+                    \lookup "brace80"
+                }
+                Skruos -- tu nu -- rie -- dė -- jo a -- ša -- ra vie -- na,
+                Leis -- kit į Tė -- vy -- nę, leis -- kit pas sa -- vus!
+                Ten pra -- džiugs krū -- ti -- nė at -- gai -- vins jaus -- mus.
+            }
+            \new Lyrics \lyricsto "main" {
+                O šir -- dis ne -- rims -- ta lais -- vės al -- ka -- na.
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Aš tikrai sugrįšiu, tu tikėk ir lauk.}
+        \DainosPosmas{2}Prabundu iš miego, praveriu akis.\\*
+        Girdis sargo žingsniai, raktų žvangesys.\\*
+        Niekas to nežino, kiek tu čia kenti.\\*
+        Kalinio dalužė, oi, sunki, sunki.
+
+        \DainosPosmas{3}Motule tu mano, motina sena,\\*
+        Nerymok prie vartų, ašarų gana.\\*
+        Gal praeis pro šalį dar metelių daug,\\*
+        Aš tikrai sugrįšiu, tu tikėk ir lauk.
+
+        \DainosPosmas{4}O jeigu bus skirta man tokia dalis ---\\*
+        Sibiras, Uralas, tolima šalis,\\*
+        Takeliu sugrįšiu laistytu krauju,\\*
+        Nes tave, Tėvyne, taip karštai myliu.
+
+        \DainosPosmas{5}Neapleido Dievas nendrės palaužtos\\*
+        Ir benamio paukščio ištikto audros.\\*
+        Neapleis ir mūsų Tėviškės gimtos.\\*
+        Čia Marijos žemė, o mes vaikai jos.
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Peizažas} % Ž15
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        c'8 b8 a8 g8 a8 g8 e8 e8 |
+                        g8 e8 g8 e8 g8 e8 d4 |
+                        d8 b'8 b8 b8 b8 b8 b8 a8 |
+                        g8 g8 a8 b8 c8 c8 c4 |
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Lau -- kas, ke -- lias, pie -- va, kry -- žius,
+                Ši -- lo juos -- ta mė -- ly -- na,
+                De -- be -- sė -- lių tan -- kus i -- žas
+                Ir grau -- di grau -- di dai -- na.
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{1}{Aš tikrai sugrįšiu, tu tikėk ir lauk.}
+        \DainosPosmas{2}Bėga kelias, ir berželiai\\*
+        Linksta vėjo pučiami;\\*
+        Samanotas stogas žalias\\*
+        Ir šuns balsas prietemy.
+
+        \DainosPosmas{3}O toliau --- paskendęs kaimas,\\*
+        Tik žirgeliai tarp klevų, ---\\*
+        Šlama liepos tokia laime,\\*
+        Tokiu liūdesiu savu.
+
+        \DainosPosmas{4}Tik sukrykš, lyg gervė, svirtis,\\*
+        Sušlamės daina klevuos\dots\\*
+        Gera čia gyvent ir mirti!\\*
+        Gera vargt čia, Lietuvoj!\dots % TODO: !.. vietoj !...
+    \end{DainosZodziai}
+
+    Knygelėje pitmo posmo paskutinė eilutė yra ,,Ir graži graudi daina``, antrojo posmo paskutinė
+    eilutė prasideda ,,Šunes balsas``, trečiojo pasmo antroji eilutė --- ,,Tik berželiai tarp
+    klevų``, ketvirtoji --- ,,Tokiu ilgesiu savu``, ketvirto posmo paskutinė eilutė prasideda
+    ,,Gera mums čia``. Bet šis eilėraštis yra gerai žinomas, sukurtas Jono Aisčio, tai palikau
+    jo sukurtą variantą.
 
 
     \cleardoublepage
