@@ -3773,12 +3773,154 @@
         Gera vargt čia, Lietuvoj!\dots % TODO: !.. vietoj !...
     \end{DainosZodziai}
 
-    Knygelėje pitmo posmo paskutinė eilutė yra ,,Ir graži graudi daina``, antrojo posmo paskutinė
+    Knygelėje pirmo posmo paskutinė eilutė yra ,,Ir graži graudi daina``, antrojo posmo paskutinė
     eilutė prasideda ,,Šunes balsas``, trečiojo pasmo antroji eilutė --- ,,Tik berželiai tarp
     klevų``, ketvirtoji --- ,,Tokiu ilgesiu savu``, ketvirto posmo paskutinė eilutė prasideda
     ,,Gera mums čia``. Bet šis eilėraštis yra gerai žinomas, sukurtas Jono Aisčio, tai palikau
     jo sukurtą variantą.
 
+
+    \DainosPavadinimas{Pavasarį paukščiai} % Ž20
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 6/8
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 8 d8 |
+                        <fis d>8 <fis d>8 <fis d>8 <fis d>8 <e a,>8 d8 |
+                        <fis d>8 <fis d>8 <fis d>8 <fis d>8 <e a,>8 d8 |
+                        <fis d>8 <fis d>8 <fis d>8 <g e>8 <a fis>8 <b g>8 |
+                        <a fis>4.~ <a fis>4 d,8 |
+                        <b' g>8 <b g>8 <b g>8 <b g>8 <a fis>8 <g e>8 |
+                        <a fis>8 <a fis>8 <b g>8 <a fis>8 <g e>8 <fis d>8 |
+                        <e a,>8 <e a,>8 <e a,>8 <a fis>8 <a fis>8 <g e>8 |
+                        <fis d>4.~ <fis d>4
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Pa -- va -- sa -- rį paukš -- čiai
+                Į tė -- viš -- kę grįž -- ta,
+                O mes ar su -- grį -- šim ka -- da?
+                Pra -- bėgs mū -- sų die -- nos,
+                Pra -- bėgs ji, jau -- nys -- tė,
+                Šir -- dy pa -- si -- liks vien skriau -- da.
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Tėvynę uždrausta mylėt?}
+        \DainosPosmas{2}Gyvenimas slenka\\*
+        Už grotų plieninių,\\*
+        Bet jis nebe tas, nebe tas.\\*
+        Visa Lietuva\\*
+        Atsidūrė Sibiriuj,\\*
+        O kas ją į laisvę išve?
+
+        \DainosPosmas{3}Į saulėtą laisvę,\\*
+        Į ateitį ramią,\\*
+        Kada ji daugiau nevergaus.\\*
+        Kai ranką pagalbos\\*
+        Išties jai nelaisvėj,\\*
+        Išgelbės nuo priešo baisaus.
+
+        \DainosPosmas{4}Dievuliau brangiausias,\\*
+        Nejaugi Tėvynę,\\*
+        Tėvynę uždrausta mylėt?\\*
+        Nejaugi laisvos\\*
+        Mūs brangiosios Lietuvos\\*
+        Neteks jau daugiau mums regėt?
+
+        \DainosPosmas{5}Pavasarį paukščiai\\*
+        Į tėviškę grįžta,\\*
+        O mes ar sugrįšim kada?\\*
+        Tai kas mūsų dienos,\\*
+        Tai kas ta jaunystė,\\*
+        Jei tėviškėj laisvės nėra?
+    \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Aš prisimenu namelį} % Ž24
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 4 <e c>8 <f d>8 |
+                        \repeat volta 2{
+                            <g e>4 <e c>4 <g e>8 <a f>8 |
+                            <g e>4 <e c>4 <g e>8 <g e>8 |
+                            <f d>4 <d g,>4 <f d>4 |
+                            \alternative{
+                                \volta 1{<e c>2 <e c>8 <f d>8}
+                                \volta 2{<e c>2 <e c>8 <g e>8}
+                            }
+                        }
+                        \repeat volta 2{
+                            <c g>4 <g e>4 <b g>8 <b g>8 |
+                            <a f>4 <f d>4 d8 <f d>8 |
+                            <b g>4. <a f>8 <a f>4 |
+                            <g e>2 <e c>8 <e c>8 |
+                            <a f>4 <f d>4 <g e>8 <a f>8 |
+                            <g e>4 <f d>4 <d g,>8 <d g,>8 |
+                            <g e>4. <f d>8 <f d>4 |
+                            \alternative{
+                                \volta 1{<e c>2 <e c>8 <g e>8}
+                                \volta 2{<e c>2}
+                            }
+                        }
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = \markup {
+                    \column { \vspace #.33 "1. "}
+                    \override #'(font-encoding . fetaBraces)
+                    \lookup "brace80"
+                }
+                Aš pri -- si -- me -- nu na -- me -- lį, tą gim -- ti -- nį sa -- vo,
+                Kur mo
+            }
+            \new Lyrics \lyricsto "main" {
+                \skip 8 \skip 8
+                tu -- lė prie ra -- te -- lio sup -- da -- ma liū -- lia -- \skip 2 \skip 8 \skip 8 vo.
+                Ir dai --
+                \repeat volta 2{
+                    ne -- lė, ta lop -- ši -- nė, ta dai -- na mo -- tu -- lės,
+                    Ir šian -- die -- ną man au -- sy -- se skam -- ba čiū -- čia  liū --
+                    \alternative {
+                        \volta 1 {lia. Ir dai}
+                        \volta 2 {lia.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Ir Tėvynė, ir Dievulis tavęs jauno laukia.}
+        \DainosPosmas{2}Čiūčia liūlia, mažutėli, auk, greičiau užauki.\\*
+        Ir Tėvynė, ir Dievulis tavęs jauno laukia.\\*
+        Kai išklysiu į pasaulį platų begalinį,\\*
+        Tėviškėlės atminimas man laimužę mini.
+
+        \DainosPosmas{3}Kai į saulę pasižiūriu, vasaros saulutę,\\*
+        Ji man primena kaip gyvą mylimą motutę.\\*
+        Ir kasdien regiu tą kaimą, tą namelį savo,\\*
+        Kur gyvenimo palaimą man lopšy liūliavo.
+    \end{DainosZodziai}
+
+    % Ž22
 
     \cleardoublepage
     % Neišeina padaryti, kad jis būtų pradžioje
