@@ -1,7 +1,13 @@
+\usepackage[lithuanian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+
 \usepackage{titlesec}
 \usepackage{verse}
 \usepackage{multicol}
-\usepackage{imakeidx}
+\usepackage{xstring}
+\usepackage[xindy]{imakeidx}
 \usepackage[unicode]{hyperref} %PDF nuorodoms TURI BŪTI PASKUTINIS!!!
 
 \titleformat{\chapter}[display]  % Remove "Chapter" and number
@@ -9,13 +15,20 @@
 
 \titleformat{\section}[display]
   {\normalfont\LARGE\bfseries\center}{}{0pt}{}
-  
+
 \titlespacing{\chapter} % Adjust chapter spacing
   {0pt} % Left margin
   {0pt} % Space above title
-  {10pt} % Space below title  
+  {10pt} % Space below title
 
-\newcommand{\DainosPavadinimas}[1]{\section{#1}\index{#1}}
+\newcommand{\DainosPavadinimas}[1]{
+  \noexpandarg
+  \StrSubstitute{#1}{Ž}{Zz-Z}[\temp]%
+  % \StrSubstitute{\temp}{Š}{Sz-S}[\temp]%
+  % \StrSubstitute{\temp}{Č}{Cz-C}[\temp]%
+  \section{#1}\index{\temp @#1}
+  %\section{#1}\index{#1}
+}
 
 \newcommand{\DainosPosmas}[1]{\flagverse{#1.}}
 \newenvironment{DainosZodziai}[2]% Pirmasis parametras - keliais stulpeliais išdėlioti posmelius, antrasis - vidutinė posmo eilutė
