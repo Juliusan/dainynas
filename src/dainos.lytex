@@ -76,7 +76,7 @@
     \chapter{Dainos}
 
 
-    \DainosPavadinimas{Tyliai leidžias pavargusi saulė}
+    \DainosPavadinimas{Tyliai leidžias pavargusi saulė} % ŽN3
     \begin{lilypond}
         <<
             \new Staff = "staff" <<
@@ -111,7 +111,7 @@
                 Ty -- liai lei -- džias pa -- var -- gu -- si sau -- lė.
                 Pas -- ku -- ti -- niai še -- šė -- liai die -- nos.
                 \repeat volta 2{
-                    Gal -- būt vis -- ką pa -- sau -- ly -- je pa -- mir -- šiu,
+                    Gal -- būt vis -- ką pa -- mir -- šiu pa -- sau -- ly,
                     Bet ta -- vęs, my -- li -- mo -- ji, nie -- ka --
                 }
                 \alternative{
@@ -140,6 +140,12 @@
         Ir numiręs aš pas tave ateisiu,\\*
         Šaltas kojas pakišiu po dekiu.
     \end{DainosZodziai}
+
+    Man įprastesnė trečioji pirmojo posmo eilutė yra ,,Galbūt viską pasaulyje pamiršiu``, bet
+    palikau taip, kaip parašyta knygelėje, nes taip geriau rimuojasi. Taip pat knygelėje
+    ketvirtojo posmo trečioji eilutė prasideda ,,Bet ir numiręs``, o ketvirtoji eilutė yra ,,Ir
+    šaltas kojas pakišiu po kaldra``. Pirmiesiems šių eilučių žodžiams reikėtų papildomų natų, o
+    ,,dekiu`` geriau rimuojasi, nei ,,kaldra``, todėl palikau taip, kaip man labiau įprasta.
 
 
     \DainosPavadinimas{Saulutė nusileido}
@@ -2506,7 +2512,7 @@
     \end{DainosZodziai}
 
     Knygelėje pieštuku prirašytas toks posmas: ,,Ištiesk, sesute, man baltą ranką,
-    \textbackslash\textbackslash\ Pakelk, mieloji, žydras akis. \textbackslash\textbackslash\  Aš
+    \textbackslash\textbackslash\ Pakelk, mieloji, žydras akis. \textbackslash\textbackslash\ Aš
     tau priminsiu Tėvynę brangią, \textbackslash\textbackslash\ Aš tau priminsiu tylias naktis.``
     Palikau tą, kuris užrašytas tušinuku. Prasmė labai panaši. Taip pat pieštuku užrašyta ir ,,O
     kai sugrįšim į Tėviškėlę, \textbackslash\textbackslash\ Mes išdainuosim visas dainas
@@ -4129,7 +4135,7 @@
     \end{DainosZodziai}
 
 
-    \DainosPavadinimas{Joninės} % Ž28 Ž29
+    \DainosPavadinimas{Joninės} % Ž28 Ž29 Ž36
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -4192,7 +4198,7 @@
         Vieną kart nurimt turės.
     \end{DainosZodziai}
 
-    Knygeleje yra du šios dainos variantai. Pirmasis man labiau įprastas, man labiau žinomais
+    Knygeleje yra trys šios dainos variantai. Pirmasis man labiau įprastas, man labiau žinomais
     žodžiais,jį ir užrašiau. Antrojo varianto žodžiai:
 
     \begin{DainosZodziai}{2}{Šviesu buvo visuos šonuos,}
@@ -4236,6 +4242,48 @@
         Tavo vardą aš išpjoviau,\\*
         Kad užmiršti negaliu.
     \end{DainosZodziai}
+
+    Trečiojo varianto žodžiai:
+
+    \begin{DainosZodziai}{2}{Kieno vardą aš išpjoviau}
+        \DainosPosmas{1}O pavasari malonus,\\*
+        O pavasari gražus,\\*
+        Tu toks mielas paslaptingas,\\*
+        Tu atgaivini jausmus.
+
+        \DainosPosmas{2}O pavasari, skubėki,\\*
+        Širdį mano nuramint.\\*
+        Širdžiai ilgesio nereikia,\\*
+        Pirmą meilę prisimint.
+
+        \DainosPosmas{3}Ten kur žalias vasarojus\\*
+        Teka upė šniokšdama.\\*
+        Ir armonika raudojo\\*
+        Stiprių rankų traukoma.
+
+        \DainosPosmas{4}Buvo naktys švento Jono,\\*
+        Laužai degė paupy.\\*
+        Buvo linksma ir malonu\\*
+        Pirmą meilę prisimint.
+
+        \DainosPosmas{5}Tu neklausk, kam aš nešioju\\*
+        Baltą gėlę atlape,\\*
+        Kieno vardą aš išpjoviau\\*
+        Į žilvitį paupėj.
+
+        \DainosPosmas{6}Aukso žiedas nekaltybės\\*
+        Jis nešiojamas visų.\\*
+        Tavo vardą pirmutinį\\*
+        Aš išpjoviau ant šakų.
+
+        \DainosPosmas{7}Kaip paukštelis prie paukštelio,\\*
+        Kaip gėlelė prie gėlės,\\*
+        Taip širdelė prie širdelės\\*
+        Vieną kart nurimt turės.
+    \end{DainosZodziai}
+
+    Penktajame posme paskutinės eilutės pabaigoje skliaustuose parašyta ,,Ant``. Tikriausiai turėta
+    omeny ,,Ant žilvičio`` vietoj ,,Į žilvitį``.
 
 
     \DainosPavadinimas{Vai, kur aš gėriau, uliavojau} % Ž34
@@ -4310,6 +4358,83 @@
         \DainosPosmas{15}Iš kraštų taisos žali maurai,\\*
         Per vidur vercias žalias žiegždras.
     \end{DainosZodziai}
+
+
+    \DainosPavadinimas{Pilnos pievos žiedų raudonųjų} % ŽN4
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 d8 e8 |
+                        <fis d>4 <g e>8 <fis d>8 <e cis>4 d8 <e cis>8 |
+                        <fis d>4 <fis d>2 d8 <e cis>8 |
+                        <fis d>4 <g e>8 <fis d>8 <e cis>4 d8 <e cis>8 |
+                        <fis d>2. <a fis>8 <a fis>8 |
+                        \repeat volta 2 {
+                            <a fis>4 <a fis>8 <a fis>8 <b g>4 <a fis>8 <g e>8 |
+                            <a fis>4 <fis d>2 <e a,>8 <fis d>8 |
+                            \alternative {
+                                \volta 1 {
+                                    <g e>4 <g e>8 <g e>8 <a fis>4 <a fis>8 <g e>8 |
+                                    <fis d>2. <a fis>8 <a fis>8 |
+                                }
+                                \volta 2 {
+                                    <g e>4 <g e>8 <g e>8 <a fis>4 <a fis>8 <a e>8 |
+                                    <fis d>2.
+                                }
+                            }
+                        }
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = "1. "
+                Pil -- nos pie -- vos žie -- dų rau -- do -- nų -- jų,
+                Ku -- rių aš pri -- si -- skint ne -- ga -- liu.
+                Pa -- my --
+                \repeat volta 2 {
+                    lė -- jau jau -- nu -- tę mer -- gai -- tę
+                    Be ku --
+                    \alternative {
+                        \volta 1 {rios aš gy -- vent ne -- ga -- liu. Pa -- my}
+                        \volta 2 {rios aš gy -- vent ne -- ga -- liu.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Kaip karštai aš mylėjau tave.}
+        \DainosPosmas{2}Galvą puošė geltonos kaselės,\\*
+        Ant pirštelių auksiniai žiedai.\\*
+        Jos akutės kaip miško žibutės,\\*
+        Jos kas dieną vilioja mane.
+
+        \DainosPosmas{3}Nevilioki, jauna mergužėle,\\*
+        Nes mūs' meilė yra netikra.\\*
+        Tu primins mane laukas sužėlęs\\*
+        Ir suolelis po liepa sena.
+
+        \DainosPosmas{4}Prisiminki, jauna mergužėle,\\*
+        Kaip karštai aš mylėjau tave.\\*
+        Ir, kada tu buvai nusiminus,\\*
+        Aš linksmas dainavau daineles.
+    \end{DainosZodziai}
+
+    Matyt, labai skubėta dainą rašant knygelėje. Pirmo posmo dvi pirmos eilutės užrašytos taip:
+    ,,Piln\textbackslash\textbackslash\ Kurių aš``. Taip pat trečiojo posmo pirmojoje eilutėje
+    paskutinis žodis sutrumpintas iki ,,merguž.``. Be to, kartais sunku įskaityti: antrojo posmo
+    antrasis žodis atrodo kaip ,,juosė``, bet pirmoji žodžio raidė lyg ir ,,p`` tik kad ant ,,š``
+    nesimato varnelės. Antrojo posmo antrosios eilutės paskutinis žodis lyg ir ,,žiedeliai``, bet
+    nėra labai aišku ir tam reikėtų papildomos natos, todėl palikau ,,žiedai``. Trečiojo posmo
+    trečiosios eilutės paskutinis žodis parašytas ,,sužėlę``. Gal čia tarmybė, bet nesu tuo tikras,
+    todėl pridėjau ,,s``.
 
 
     \cleardoublepage
