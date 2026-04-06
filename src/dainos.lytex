@@ -3907,7 +3907,105 @@
     \end{DainosZodziai}
 
 
+    \DainosPavadinimas{Žvėrys slapstosi urvuose} % Ž23
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key c \major
+                \time 3/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative c' {
+                        \partial 4 <e c>8 <f d>8 |
+                        \repeat volta 2{
+                            <g e>4 <e c>4 <g e>8 <a f>8 |
+                            <g e>4 <e c>4 <g e>8 <g e>8 |
+                            <f d>4 <d g,>4 <f d>4 |
+                            \alternative{
+                                \volta 1{<e c>2 <e c>8 <f d>8}
+                                \volta 2{<e c>2 <e c>8 <g e>8}
+                            }
+                        }
+                        \repeat volta 2{
+                            <c g>4 <g e>4 <b g>8 <b g>8 |
+                            <a f>4 <f d>4 d8 <f d>8 |
+                            <b g>4. <a f>8 <a f>4 |
+                            <g e>2 <e c>8 <e c>8 |
+                            <a f>4 <f d>4 <g e>8 <a f>8 |
+                            <g e>4 <f d>4 <d g,>8 <d g,>8 |
+                            <g e>4. <f d>8 <f d>4 |
+                            \alternative{
+                                \volta 1{<e c>2 <e c>8 <g e>8}
+                                \volta 2{<e c>2}
+                            }
+                        }
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                \set stanza = \markup {
+                    \column { \vspace #.33 "1. "}
+                    \override #'(font-encoding . fetaBraces)
+                    \lookup "brace80"
+                }
+                Žvė -- rys slaps -- to -- si ur -- vuo -- se, paukš -- čiai liz -- dą tu -- ri.
+                Ne -- su
+            }
+            \new Lyrics \lyricsto "main" {
+                \skip 8 \skip 8
+                ran -- da sau -- gios vie -- tos tik kan -- trus lie -- tu -- \skip 2 \skip 8 \skip 8 vis.
+                Ir na --
+                \repeat volta 2{
+                    muo -- se, ir miš -- kuo -- se pa -- sis -- lėp -- ti ban -- do,
+                    Bet žiau -- ru -- sis a -- tė -- jū -- nas jį vi -- sur su -- ran --
+                    \alternative {
+                        \volta 1 {da. Ir na}
+                        \volta 2 {da.}
+                    }
+                }
+            }
+        >>
+    \end{lilypond}
+    \begin{DainosZodziai}{2}{Lūpos kalba Dievui maldą, tėvo balsas dreba.}
+        \DainosPosmas{2}Kapinėse tarp liepelių kukuoja gegutė.\\*
+        Ne gegutė ten kukuoja, tik verkia močiutė.\\*
+        Apkabinus rankom kapą vardu šaukia sūnų,\\*
+        Kurį atėmė motulei kulka atėjūno.
+
+        \DainosPosmas{3}O sodely jovarėly balandis burkuoja.\\*
+        Ten ir mano žilagalvis tėvelis vaitoja.\\*
+        Lūpos kalba Dievui maldą, tėvo balsas dreba.\\*
+        Atėjūnai jo tris sūnus užkasė be kapo.
+
+        \DainosPosmas{4}Lelijėlės svyra, linksta, žemyn galvas lenkia.\\*
+        Mergužėlė gailiai verkia, gėlių žiedus skina.\\*
+        Kad galėtų, mergužėlė paukštele nulėktų\\*
+        Pas kankinamą bernelį, gal paguost galėtų.
+
+        \DainosPosmas{5}Tėvo, motinos, seselių ašaros išlietos\\*
+        Ir kiečiausią akmenėlį sugraudint galėtų.\\*
+        Nuo jų ašarų sutirptų ir stiprus granitas,\\*
+        Tik ne žiaurūs bolševikai, ne jų širdys kietos.
+    \end{DainosZodziai}
+
+    Šita daina daug taisyta. Kai kur palikau pataisymus, kai kur tai, kas buvo originaliai
+    užrašyta. Antrojo posmo pradžia originaliai buvo ,,Pakelėse ir prie kelio``. Trečiojo posmo
+    antrosios eilutės pradžia taisyta į ,,Po jovaru``, o pabaiga originaliai buvo ,,dūsuoja``
+    vietoj ,,vaitoja``. Trečiojoje eilutėje originaliai buvo ,,rankos``, pataisyta į ,,balsas``.
+    Ketvirtosios eilutės pradžia originaliai yra ,,Atėjūnai jau ir sūnų``, o pabaigą užrašiau
+    originalią, knygelėje taisyta į ,,jau į mirtį veda``. Beje, originale prie ,,kapo``
+    skliaustuose prirašyta ,,grabo``, bet, manau, ,,kapo`` labiau tinka. Penktojo posmo paskutinės
+    dvi eilutės originaliai užrašytos tokios: ,,Nuo ašarų sugraudėtų kiečiausias granitas,
+    \textbackslash\textbackslash\ Tiktai žiaurūs bolševikai ir jų širdys kietos``. Manau,
+    pataisymai, kuriuos ir užrašiau, yra logiškesni ir natūralesni.
+
+
     \DainosPavadinimas{Aš prisimenu namelį} % Ž24
+
+    Ir vėl, regisi, kita daina ta pačia melodija.
 
     \begin{lilypond}
         \new ChoirStaff<<
@@ -4371,22 +4469,22 @@
                 \new Voice = "main" {
                     \autoBeamOff
                     \relative d' {
-                        \partial 4 d8 e8 |
-                        <fis d>4 <g e>8 <fis d>8 <e cis>4 d8 <e cis>8 |
-                        <fis d>4 <fis d>2 d8 <e cis>8 |
-                        <fis d>4 <g e>8 <fis d>8 <e cis>4 d8 <e cis>8 |
-                        <fis d>2. <a fis>8 <a fis>8 |
+                        \partial 4 d8. <e a,>16 |
+                        <fis d>4 <g e>8. <fis d>16 <e cis>4 d8. <e cis>16 |
+                        <fis d>4 <fis d>2 d8. <e a,>16 |
+                        <fis d>4 <g e>8. <fis d>16 <e cis>4 d8. <e cis>16 |
+                        <fis d>2. <a fis>8. <a fis>16 |
                         \repeat volta 2 {
-                            <a fis>4 <a fis>8 <a fis>8 <b g>4 <a fis>8 <g e>8 |
-                            <a fis>4 <fis d>2 <e a,>8 <fis d>8 |
+                            <a fis>4 <b g>8. <a fis>16 <g e>4 <a fis>8. <g e>16 |
+                            <fis d>4 <fis d>2 d8. <e a,>16 |
                             \alternative {
                                 \volta 1 {
-                                    <g e>4 <g e>8 <g e>8 <a fis>4 <a fis>8 <g e>8 |
-                                    <fis d>2. <a fis>8 <a fis>8 |
+                                    <fis d>4 <g e>8. <fis d>16 <e cis>4 d8. <e cis>16 |
+                                    <fis d>2. <a fis>8. <a fis>16 |
                                 }
                                 \volta 2 {
-                                    <g e>4 <g e>8 <g e>8 <a fis>4 <a fis>8 <a e>8 |
-                                    <fis d>2.
+                                    <fis d>4 <g e>8. <fis d>16 <e cis>4 d8. cis16 |
+                                    d2.
                                 }
                             }
                         }
@@ -4435,6 +4533,31 @@
     nėra labai aišku ir tam reikėtų papildomos natos, todėl palikau ,,žiedai``. Trečiojo posmo
     trečiosios eilutės paskutinis žodis parašytas ,,sužėlę``. Gal čia tarmybė, bet nesu tuo tikras,
     todėl pridėjau ,,s``.
+
+    Užrašyta versija, kurią man padainavo mamytė. Tėvelis prisiminė kiek kitokią pabaigą (tiek
+    pirmojoje, tiek antrojoje voltoje):
+
+    \begin{lilypond}
+        \new ChoirStaff<<
+            \new Staff <<
+                \key d \major
+                \time 4/4
+                \clef treble
+                \new Voice = "main" {
+                    \autoBeamOff
+                    \relative d' {
+                        \partial 4 a8. a16 |
+                        <fis' d>4 <fis d>8. <fis d>16 <a fis>4 <a fis>8. <g e>16 |
+                        <fis d>2.
+                    }
+                    \bar "|."
+                }
+            >>
+            \new Lyrics \lyricsto "main" {
+                Be ku -- rios aš gy -- vent ne -- ga -- liu.
+            }
+        >>
+    \end{lilypond}
 
 
     \cleardoublepage
